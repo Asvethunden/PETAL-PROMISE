@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    ============================================================================
+    CL1000 - IICT SEMESTER PROJECT: FALL 2026
+    Student Name: Jaweria Junejo
+    Roll Number: 26i-3206
+    Section: SE-D
+    Page 2: Wedding Traditions & Ceremonies (Interactive Dynamic Catalog)
+    Relative Path: pages/wedding-traditions.html
+    ============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Traditions | Petal &amp; Promise - Jaweria (26i-3206)</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- External Shared Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Academic Metadata Top Bar -->
+    <aside class="academic-bar" aria-label="Academic Project Info">
+        <div class="container">
+            <div>
+                <strong>IICT Semester Project (Fall 2026)</strong> | Class: <strong>SE-D</strong>
+            </div>
+            <div>
+                Module: <strong>Wedding Traditions (Page 2 of 3)</strong>
+                <span class="student-tag">Jaweria Junejo (26i-3206)</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Site Navigation -->
+    <header class="main-nav">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand-logo">
+                Petal &amp; <span>Promise</span>
+            </a>
+            
+            <button class="hamburger-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html">Home</a></li>
+                <li class="nav-item"><a href="cultural-weddings.html">Cultural Weddings</a></li>
+                <li class="nav-item"><a href="wedding-traditions.html" class="active">Wedding Traditions</a></li>
+                <li class="nav-item"><a href="cultural-preferences.html">Cultural Preferences</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <p class="hero-tagline">Ceremonial Tapestry of the World</p>
+                <h1 class="hero-heading">Iconic <em>Wedding Traditions</em></h1>
+                <p class="hero-description">
+                    Search and filter sacred rituals across South Asian, Middle Eastern, Western, and East Asian traditions. 
+                    Select your preferred ceremonial rites to add them to your personalized wedding blueprint.
+                </p>
+                <div class="btn-group">
+                    <a href="#traditions-catalog" class="btn btn-gold">Filter Catalog ↓</a>
+                    <a href="cultural-preferences.html" class="btn btn-outline">Go to Custom Planner</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traditions Catalog Section with Live JS Search & Filtering (Rubric: Data & Display) -->
+        <section class="section-padding" id="traditions-catalog">
+            <div class="container">
+                
+                <div class="section-head">
+                    <span class="sub-title">Interactive Rituals Explorer</span>
+                    <h2 class="main-title">Explore Ceremonial Traditions</h2>
+                    <p class="section-intro-text">
+                        Use the dynamic filter chips or search bar below to find specific ceremonies, attire motifs, and cultural rites.
+                    </p>
+                </div>
+
+                <!-- Dynamic Filter & Search Toolbar (JavaScript Powered) -->
+                <div class="filter-search-bar">
+                    <nav class="filter-btn-cluster" aria-label="Culture Filter Tabs">
+                        <button type="button" class="filter-chip active" data-filter="all" onclick="handleCategoryFilter('all', this)">All Cultures</button>
+                        <button type="button" class="filter-chip" data-filter="desi" onclick="handleCategoryFilter('desi', this)">Desi (South Asian)</button>
+                        <button type="button" class="filter-chip" data-filter="middle-east" onclick="handleCategoryFilter('middle-east', this)">Middle Eastern (Arab)</button>
+                        <button type="button" class="filter-chip" data-filter="western" onclick="handleCategoryFilter('western', this)">Western Classic</button>
+                        <button type="button" class="filter-chip" data-filter="east-asian" onclick="handleCategoryFilter('east-asian', this)">East Asian</button>
+                    </nav>
+
+                    <div>
+                        <input type="text" id="traditionSearchBox" class="search-input-box" placeholder="🔍 Search ceremonies, e.g. Henna, Zaffa, Vows..." oninput="handleSearchInput(this.value)">
+                    </div>
+                </div>
+
+                <!-- Dynamic Grid Rendered via JavaScript Array (Data & Display Rubric Requirement) -->
+                <div class="cards-grid" id="dynamicTraditionsGrid">
+                    <!-- Populated dynamically by js/script.js from culturalTraditionsData -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cultural Symbolism Deep-Dive Table -->
+        <section class="section-padding" style="background: #fbf6ee;">
+            <div class="container">
+                <div class="section-head">
+                    <span class="sub-title">Symbolic Elements</span>
+                    <h2 class="main-title">Sacred Symbols &amp; Meaning</h2>
+                    <p class="section-intro-text">
+                        Understand the spiritual, emotional, and social significance behind traditional wedding practices.
+                    </p>
+                </div>
+
+                <div style="overflow-x: auto; background: #ffffff; border-radius: 16px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-soft);">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                        <thead>
+                            <tr style="background: var(--primary-burgundy); color: #ffffff;">
+                                <th style="padding: 16px 20px;">Tradition / Custom</th>
+                                <th style="padding: 16px 20px;">Origin Culture</th>
+                                <th style="padding: 16px 20px;">Primary Symbolism</th>
+                                <th style="padding: 16px 20px;">Key Ritual Element</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #f6eee5;">
+                                <td style="padding: 16px 20px; font-weight: 600; color: var(--primary-burgundy);">Bridal Henna (Mehndi)</td>
+                                <td style="padding: 16px 20px;">South Asian / Arab</td>
+                                <td style="padding: 16px 20px;">Spiritual fertility, deep marital love, and protection from evil eyes.</td>
+                                <td style="padding: 16px 20px;">Herbal Lawsonia paste in ornate floral and paisley motifs.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f6eee5; background: #faf7f2;">
+                                <td style="padding: 16px 20px; font-weight: 600; color: var(--primary-burgundy);">Groom Sehra Bandi</td>
+                                <td style="padding: 16px 20px;">Desi (Pakistan / North India)</td>
+                                <td style="padding: 16px 20px;">Royal dignity, honor of the groom, and warding off negativity.</td>
+                                <td style="padding: 16px 20px;">Crown of pearls and real jasmine or rose garlands covering face.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f6eee5;">
+                                <td style="padding: 16px 20px; font-weight: 600; color: var(--primary-burgundy);">Zaffa Percussion Procession</td>
+                                <td style="padding: 16px 20px;">Middle Eastern (Levant / Gulf)</td>
+                                <td style="padding: 16px 20px;">Triumphant communal announcement of marital union and joy.</td>
+                                <td style="padding: 16px 20px;">Bendir drums, mizmar horns, and coordinated Dabke folk dance.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f6eee5; background: #faf7f2;">
+                                <td style="padding: 16px 20px; font-weight: 600; color: var(--primary-burgundy);">Unity Candle Lighting</td>
+                                <td style="padding: 16px 20px;">Western Christian / Modern</td>
+                                <td style="padding: 16px 20px;">Merging two individual families into a single spiritual household.</td>
+                                <td style="padding: 16px 20px;">Two taper candles igniting one central pillar flame.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px 20px; font-weight: 600; color: var(--primary-burgundy);">Lotus Seed Tea Serving</td>
+                                <td style="padding: 16px 20px;">East Asian (Chinese / Han)</td>
+                                <td style="padding: 16px 20px;">Filial piety, honoring ancestral lineage, and welcoming sweet abundance.</td>
+                                <td style="padding: 16px 20px;">Double Happiness porcelain tea cups and elder blessings.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: var(--primary-gold); font-family: 'Playfair Display', serif; margin-bottom: 12px;">Petal &amp; Promise</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7;">
+                        Curating bespoke cultural weddings with sacred heritage and modern luxury.
+                    </p>
+                    <p class="ai-disclosure-notice">
+                        *Images used for educational and non-commercial project purposes via Unsplash.
+                    </p>
+                </div>
+                <div>
+                    <h4>Jaweria's Module Pages</h4>
+                    <ul>
+                        <li><a href="cultural-weddings.html">1. Cultural Weddings Overview</a></li>
+                        <li><a href="wedding-traditions.html">2. Wedding Traditions &amp; Ceremonies</a></li>
+                        <li><a href="cultural-preferences.html">3. Cultural Preferences &amp; Planner</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>IICT Student Credits</h4>
+                    <ul>
+                        <li>Course: <strong>IICT (Fall 2026)</strong></li>
+                        <li>Developer: <strong>Jaweria Junejo</strong></li>
+                        <li>Roll No: <strong>26i-3206</strong></li>
+                        <li>Section: <strong>SE-D</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Petal &amp; Promise Wedding Planners. Implemented for IICT by <strong>Jaweria Junejo (26i-3206, SE-D)</strong>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Vanilla JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

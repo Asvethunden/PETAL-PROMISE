@@ -1,0 +1,599 @@
+/*
+================================================================================
+IICT SEMESTER PROJECT - SUBMISSION DAY 2: CSS STYLING & RESPONSIVE DESIGN
+================================================================================
+Student Name: Jaweria Junejo
+Roll Number: 26i-3206
+Section: SE-D
+Module: Cultural Weddings, Wedding Traditions & Cultural Preferences
+Day 2 Deliverable: Comprehensive CSS Architecture & Visual Aesthetics
+================================================================================
+*/
+
+/* 1. Global Reset & Theme Variables */
+:root {
+    --primary-burgundy: #721629;
+    --primary-gold: #c89d2d;
+    --light-gold: #fdf5e2;
+    --deep-emerald: #153c2c;
+    --rose-cream: #faf7f2;
+    --card-bg: #ffffff;
+    --dark-charcoal: #201b1c;
+    --muted-gray: #6d6466;
+    --border-color: #eedcc9;
+    --shadow-subtle: 0 8px 24px rgba(114, 22, 41, 0.08);
+    --shadow-elevated: 0 16px 36px rgba(114, 22, 41, 0.16);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 24px;
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--rose-cream);
+    color: var(--dark-charcoal);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--primary-burgundy);
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-burgundy);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-gold);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 2. Top Academic Credential Bar */
+.academic-badge {
+    background: linear-gradient(135deg, var(--primary-burgundy), #450c18);
+    color: #fff;
+    padding: 12px 0;
+    border-bottom: 2px solid var(--primary-gold);
+    font-size: 0.88rem;
+}
+
+.academic-badge .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge-tag {
+    background-color: var(--primary-gold);
+    color: #2b080f;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* 3. Site Navigation */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.brand-title {
+    font-size: 1.75rem;
+    color: var(--primary-burgundy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-title span {
+    color: var(--primary-gold);
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gold);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+    width: 100%;
+}
+
+/* 4. Hero Section */
+.hero-banner {
+    background: linear-gradient(rgba(32, 6, 12, 0.78), rgba(32, 6, 12, 0.82)),
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 110px 20px 90px;
+    position: relative;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--primary-gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.hero-headline {
+    color: #ffffff;
+    font-size: 3.2rem;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.hero-headline span {
+    color: var(--light-gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+}
+
+.hero-subtext {
+    max-width: 780px;
+    margin: 0 auto 35px;
+    font-size: 1.12rem;
+    color: #f1e4d7;
+    font-weight: 300;
+}
+
+.hero-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-gold);
+    color: #2b080f;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: #e2b43b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(200, 157, 45, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: var(--primary-burgundy);
+    transform: translateY(-3px);
+}
+
+/* 5. Section Global Styles */
+.content-section {
+    padding: 85px 0;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 55px;
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--primary-gold);
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: var(--muted-gray);
+    font-size: 1.05rem;
+}
+
+/* 6. Tradition Cards Grid */
+.traditions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+.tradition-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.tradition-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-elevated);
+    border-color: var(--primary-gold);
+}
+
+.card-img-placeholder {
+    height: 190px;
+    background: linear-gradient(135deg, #440d18, #7a1c30);
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-tag {
+    background-color: var(--primary-gold);
+    color: #2b080f;
+    padding: 4px 14px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-content {
+    padding: 26px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.card-desc {
+    color: var(--muted-gray);
+    font-size: 0.94rem;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.ritual-highlights {
+    list-style: none;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 14px;
+    margin-top: auto;
+}
+
+.ritual-highlights li {
+    font-size: 0.86rem;
+    color: #4f4648;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.ritual-highlights li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--primary-gold);
+}
+
+/* 7. Preferences Form Section */
+.preferences-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.form-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 35px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-subtle);
+}
+
+.preference-group {
+    margin-bottom: 28px;
+}
+
+.preference-group label.group-heading {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--primary-burgundy);
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+
+.group-note {
+    font-size: 0.85rem;
+    color: var(--muted-gray);
+    margin-bottom: 14px;
+    display: block;
+}
+
+.radio-pill-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+.radio-pill {
+    position: relative;
+}
+
+.radio-pill input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-pill span {
+    display: block;
+    padding: 12px;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.radio-pill input:checked + span {
+    border-color: var(--primary-burgundy);
+    background-color: #fbf1f3;
+    color: var(--primary-burgundy);
+    box-shadow: 0 4px 10px rgba(114, 22, 41, 0.12);
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.check-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #faf6f0;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.check-pill:hover {
+    background: #f4ebe0;
+}
+
+.check-pill input[type="checkbox"] {
+    accent-color: var(--primary-burgundy);
+    width: 17px;
+    height: 17px;
+}
+
+.form-select, .form-input, .form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: #ffffff;
+    transition: var(--transition);
+}
+
+.form-select:focus, .form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-burgundy);
+    box-shadow: 0 0 0 3px rgba(114, 22, 41, 0.1);
+}
+
+/* 8. Summary Blueprint Sidebar */
+.summary-blueprint {
+    background: #ffffff;
+    border: 2px solid var(--primary-gold);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-subtle);
+    position: sticky;
+    top: 90px;
+}
+
+.blueprint-header {
+    text-align: center;
+    border-bottom: 2px dashed var(--border-color);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.blueprint-header h3 {
+    font-size: 1.5rem;
+}
+
+.blueprint-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.blueprint-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f6eee5;
+    font-size: 0.92rem;
+}
+
+.blueprint-list li span.prop {
+    color: var(--muted-gray);
+}
+
+.blueprint-list li span.val {
+    font-weight: 600;
+    color: var(--primary-burgundy);
+}
+
+.blueprint-estimate {
+    background: #faf5ee;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.blueprint-estimate small {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: var(--muted-gray);
+    letter-spacing: 1px;
+}
+
+.blueprint-estimate strong {
+    font-size: 1.5rem;
+    color: var(--primary-burgundy);
+    font-family: 'Playfair Display', serif;
+}
+
+/* 9. Site Footer */
+.site-footer {
+    background: #180509;
+    color: #cfc2c4;
+    padding: 60px 0 25px;
+    border-top: 4px solid var(--primary-gold);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.footer-grid h4 {
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.footer-grid ul {
+    list-style: none;
+}
+
+.footer-grid ul li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 22px;
+    font-size: 0.85rem;
+}
+
+.footer-bottom strong {
+    color: var(--primary-gold);
+}
+
+/* 10. Responsive Media Queries */
+@media (max-width: 992px) {
+    .preferences-layout {
+        grid-template-columns: 1fr;
+    }
+    .hero-headline {
+        font-size: 2.6rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hero-headline {
+        font-size: 2rem;
+    }
+    .checklist-grid {
+        grid-template-columns: 1fr;
+    }
+}

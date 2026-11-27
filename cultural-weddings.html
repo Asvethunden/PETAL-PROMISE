@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Weddings & Traditions | Petal & Promise - By Jaweria</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-burgundy: #7a1c30;
+            --primary-gold: #c59b27;
+            --light-gold: #f4e8c1;
+            --deep-emerald: #1b4332;
+            --rose-cream: #fdfbf7;
+            --blush-accent: #f8ece8;
+            --dark-charcoal: #232020;
+            --muted-gray: #6b6363;
+            --border-color: #eeddc9;
+            --shadow-soft: 0 10px 30px rgba(122, 28, 48, 0.08);
+            --shadow-hover: 0 15px 35px rgba(197, 155, 39, 0.2);
+            --transition-smooth: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--rose-cream);
+            color: var(--dark-charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+
+        .cormorant {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* Top Bar / Student Tag */
+        .developer-badge-bar {
+            background: linear-gradient(135deg, var(--primary-burgundy), #4d0a1b);
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 0.88rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-gold);
+        }
+
+        .developer-badge-bar .badge-highlight {
+            background-color: var(--primary-gold);
+            color: #1a0307;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        /* Header / Navbar */
+        .site-header {
+            background: rgba(253, 251, 247, 0.96);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-burgundy);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo span {
+            color: var(--primary-gold);
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-charcoal);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-burgundy);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Banner */
+        .cultural-hero {
+            background: linear-gradient(rgba(35, 7, 15, 0.72), rgba(35, 7, 15, 0.75)), 
+                        radial-gradient(circle at center, rgba(197, 155, 39, 0.25) 0%, transparent 70%),
+                        #380b15;
+            color: white;
+            text-align: center;
+            padding: 100px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cultural-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c59b27' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.7;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero-title em {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--light-gold);
+            font-weight: 400;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: #eee0d5;
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 13px 30px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: 2px solid transparent;
+        }
+
+        .btn-gold {
+            background-color: var(--primary-gold);
+            color: #2a0b12;
+        }
+
+        .btn-gold:hover {
+            background-color: #dfb239;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(197, 155, 39, 0.4);
+        }
+
+        .btn-outline-light {
+            border-color: rgba(255, 255, 255, 0.6);
+            color: white;
+            background: transparent;
+        }
+
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--primary-burgundy);
+            transform: translateY(-3px);
+        }
+
+        /* Section Global */
+        .section-padding {
+            padding: 85px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 55px;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-burgundy);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            color: var(--muted-gray);
+            font-size: 1.05rem;
+        }
+
+        /* Cultural Traditions Tabs & Cards */
+        .traditions-filter-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-burgundy);
+            color: white;
+            border-color: var(--primary-burgundy);
+            box-shadow: 0 4px 15px rgba(122, 28, 48, 0.25);
+        }
+
+        .traditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .tradition-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tradition-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-gold);
+        }
+
+        .card-banner {
+            height: 200px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .card-banner::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+        }
+
+        .card-tag {
+            position: relative;
+            z-index: 2;
+            background: var(--primary-gold);
+            color: #23080e;
+            padding: 4px 14px;
+            border-radius: 14px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-body {
+            padding: 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: var(--primary-burgundy);
+            margin-bottom: 12px;
+        }
+
+        .card-text {
+            color: var(--muted-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .tradition-rituals-list {
+            list-style: none;
+            border-top: 1px dashed var(--border-color);
+            padding-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tradition-rituals-list li {
+            font-size: 0.88rem;
+            color: #4b4444;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .tradition-rituals-list li i {
+            color: var(--primary-gold);
+            font-size: 0.8rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f2e7db;
+            padding-top: 15px;
+        }
+
+        .card-link {
+            color: var(--primary-burgundy);
+            font-weight: 600;
+            font-size: 0.88rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition-smooth);
+        }
+
+        .card-link:hover {
+            color: var(--primary-gold);
+            transform: translateX(4px);
+        }
+
+        /* Cultural Preferences Planner Section */
+        .preferences-section {
+            background: linear-gradient(180deg, #f8f3eb 0%, var(--rose-cream) 100%);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .preferences-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .preference-box {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group-custom {
+            margin-bottom: 28px;
+        }
+
+        .form-group-custom label {
+            display: block;
+            font-weight: 600;
+            color: var(--primary-burgundy);
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .form-group-custom .help-text {
+            display: block;
+            font-size: 0.84rem;
+            color: var(--muted-gray);
+            margin-top: -6px;
+            margin-bottom: 12px;
+        }
+
+        /* Selection Pills & Cards */
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .selectable-chip {
+            border: 2px solid #ecdcd0;
+            border-radius: 12px;
+            padding: 12px 14px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            background: #fff;
+            user-select: none;
+        }
+
+        .selectable-chip i {
+            font-size: 1.3rem;
+            color: var(--primary-gold);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .selectable-chip span {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            display: block;
+        }
+
+        .selectable-chip:hover {
+            border-color: var(--primary-burgundy);
+            transform: translateY(-2px);
+        }
+
+        .selectable-chip.active {
+            border-color: var(--primary-burgundy);
+            background: #fff5f6;
+            box-shadow: 0 4px 12px rgba(122, 28, 48, 0.12);
+        }
+
+        .selectable-chip.active i {
+            color: var(--primary-burgundy);
+        }
+
+        /* Multi-check Rituals */
+        .rituals-checklist {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #faf6f0;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: var(--transition-smooth);
+        }
+
+        .check-item:hover {
+            background: #f4ecdf;
+        }
+
+        .check-item input[type="checkbox"] {
+            accent-color: var(--primary-burgundy);
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+        }
+
+        .check-item span {
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        /* Custom inputs */
+        .input-field {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--primary-burgundy);
+            box-shadow: 0 0 0 3px rgba(122, 28, 48, 0.1);
+        }
+
+        /* Preference Live Summary Card */
+        .summary-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            border: 2px solid var(--primary-gold);
+            box-shadow: var(--shadow-soft);
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-header {
+            border-bottom: 2px dashed #ede1d3;
+            padding-bottom: 18px;
+            margin-bottom: 22px;
+            text-align: center;
+        }
+
+        .summary-header h3 {
+            color: var(--primary-burgundy);
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+
+        .summary-header p {
+            font-size: 0.88rem;
+            color: var(--muted-gray);
+        }
+
+        .summary-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .summary-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f6eee4;
+            font-size: 0.92rem;
+        }
+
+        .summary-list li .label {
+            color: var(--muted-gray);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .summary-list li .value {
+            font-weight: 600;
+            color: var(--dark-charcoal);
+            text-align: right;
+        }
+
+        .selected-rituals-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 5px;
+            max-height: 90px;
+            overflow-y: auto;
+        }
+
+        .ritual-badge {
+            background: var(--blush-accent);
+            color: var(--primary-burgundy);
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .summary-footer {
+            background: #faf6f0;
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .summary-footer .est-label {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted-gray);
+            margin-bottom: 4px;
+        }
+
+        .summary-footer .est-val {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-burgundy);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .btn-submit-preferences {
+            width: 100%;
+            margin-top: 15px;
+            background: var(--primary-burgundy);
+            color: white;
+            justify-content: center;
+            padding: 14px;
+        }
+
+        .btn-submit-preferences:hover {
+            background: #5c0f20;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(122, 28, 48, 0.3);
+        }
+
+        /* Success Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+            animation: modalFade 0.3s ease-out;
+        }
+
+        @keyframes modalFade {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-icon {
+            width: 70px;
+            height: 70px;
+            background: #edf8f0;
+            color: var(--deep-emerald);
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            color: var(--primary-burgundy);
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .modal-desc {
+            color: var(--muted-gray);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #1c080d;
+            color: #d8c3c7;
+            padding: 60px 0 25px;
+            border-top: 4px solid var(--primary-gold);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: var(--primary-gold);
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #d8c3c7;
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-gold);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 25px;
+            font-size: 0.84rem;
+        }
+
+        .footer-bottom .jaweria-tag {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .preferences-container {
+                grid-template-columns: 1fr;
+            }
+            .summary-card {
+                position: static;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .developer-badge-bar {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+            .rituals-checklist {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Student & Module Contribution Header Banner -->
+    <aside class="developer-badge-bar" aria-label="Student Project Credit">
+        <div>
+            <i class="fa-solid fa-graduation-cap"></i> 
+            <strong>IICT Semester Project:</strong> Petal &amp; Promise Wedding Planner
+        </div>
+        <div>
+            Module: <strong>Cultural Weddings, Traditions &amp; Cultural Preferences</strong>
+            <span class="badge-highlight"><i class="fa-solid fa-user-pen"></i> Part by: Jaweria</span>
+        </div>
+    </aside>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand-logo">
+                <i class="fa-solid fa-fan" style="color: var(--primary-gold);"></i>
+                Petal &amp; <span>Promise</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#traditions" class="active">Wedding Traditions</a></li>
+                <li><a href="#customs">Customs &amp; Rituals</a></li>
+                <li><a href="#preferences">Cultural Preferences</a></li>
+                <li><a href="#planner">Custom Planner</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="cultural-hero" id="home">
+            <div class="container hero-content">
+                <p class="hero-tag"><i class="fa-solid fa-sparkles"></i> Honoring Heritage, Bonding Souls</p>
+                <h1 class="hero-title">Cultural Weddings &amp; <em>Sacred Traditions</em></h1>
+                <p class="hero-desc">
+                    Every culture carries timeless rituals that weave love, family, and ancestry into an unforgettable celebration. 
+                    Explore signature wedding traditions and curate your personalized cultural wedding package.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#traditions" class="btn btn-gold">
+                        <i class="fa-solid fa-compass"></i> Explore Traditions
+                    </a>
+                    <a href="#preferences" class="btn btn-outline-light">
+                        <i class="fa-solid fa-sliders"></i> Customize Your Preferences
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 1: Wedding Traditions Section -->
+        <section class="section-padding" id="traditions">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">A Rich Tapestry of Ceremonies</span>
+                    <h2 class="section-title">Iconic Wedding Traditions</h2>
+                    <p class="section-desc">
+                        From the celebratory rhythms of South Asian Dholaks to the sacred vows of Western chapels, discover the ceremonial significance of diverse cultural weddings.
+                    </p>
+                </div>
+
+                <!-- Culture Filter Tabs -->
+                <nav class="traditions-filter-nav" aria-label="Traditions Culture Filter">
+                    <button class="filter-btn active" onclick="filterTraditions('all', this)">All Cultures</button>
+                    <button class="filter-btn" onclick="filterTraditions('desi', this)">Desi / South Asian</button>
+                    <button class="filter-btn" onclick="filterTraditions('middle-east', this)">Middle Eastern / Arab</button>
+                    <button class="filter-btn" onclick="filterTraditions('western', this)">Western Classic</button>
+                    <button class="filter-btn" onclick="filterTraditions('east-asian', this)">East Asian Heritage</button>
+                </nav>
+
+                <!-- Traditions Cards Grid -->
+                <div class="traditions-grid" id="traditionsGrid">
+                    
+                    <!-- Card 1: South Asian Mehndi & Mayun -->
+                    <article class="tradition-card" data-category="desi">
+                        <div class="card-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=700&q=80');">
+                            <span class="card-tag"><i class="fa-solid fa-seedling"></i> South Asian</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Mehndi &amp; Mayun Celebrations</h3>
+                            <p class="card-text">
+                                A high-spirited night of turmeric (Ubtan), intricate henna designs, floral jewelry, choreographed folk dances, and reverberating Dholak beats.
+                            </p>
+                            <ul class="tradition-rituals-list">
+                                <li><i class="fa-solid fa-check"></i> Intricate Bridal Mehndi (Henna) Application</li>
+                                <li><i class="fa-solid fa-check"></i> Rasm-e-Heena &amp; Mithai Sharing</li>
+                                <li><i class="fa-solid fa-check"></i> Traditional Marigold &amp; Genda Phool Decor</li>
+                            </ul>
+                            <div class="card-footer">
+                                <span style="font-size: 0.85rem; color: var(--muted-gray);"><i class="fa-regular fa-clock"></i> 2-Day Ritual</span>
+                                <a href="#preferences" class="card-link" onclick="quickSelectTradition('South Asian (Mehndi/Barat/Walima)')">
+                                    Plan This <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Nikkah & Barat Ceremony -->
+                    <article class="tradition-card" data-category="desi">
+                        <div class="card-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80');">
+                            <span class="card-tag"><i class="fa-solid fa-feather-pointed"></i> Sacred Desi</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Nikkah &amp; Regal Barat</h3>
+                            <p class="card-text">
+                                The formal solemnization of wedding vows (Ijab-o-Qubool), signing of the Nikkahnama, followed by a regal Barat procession and heartfelt Rukhsati.
+                            </p>
+                            <ul class="tradition-rituals-list">
+                                <li><i class="fa-solid fa-check"></i> Islamic Nikkah with Floral Dupatta Veil</li>
+                                <li><i class="fa-solid fa-check"></i> Sehra Bandi &amp; Royal Groom Grand Entry</li>
+                                <li><i class="fa-solid fa-check"></i> Doodh Pilai &amp; Joota Chupai Fun Rituals</li>
+                            </ul>
+                            <div class="card-footer">
+                                <span style="font-size: 0.85rem; color: var(--muted-gray);"><i class="fa-regular fa-clock"></i> Grand Day Event</span>
+                                <a href="#preferences" class="card-link" onclick="quickSelectTradition('South Asian (Mehndi/Barat/Walima)')">
+                                    Plan This <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Middle Eastern Zaffa & Katb Al-Kitab -->
+                    <article class="tradition-card" data-category="middle-east">
+                        <div class="card-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80');">
+                            <span class="card-tag"><i class="fa-solid fa-moon"></i> Arab Tradition</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Zaffa &amp; Katb Al-Kitab</h3>
+                            <p class="card-text">
+                                Vibrant Arabic musical procession with bagpipes, bendir drums, and Dabke dancers, paired with the sacred Katb Al-Kitab marriage contract.
+                            </p>
+                            <ul class="tradition-rituals-list">
+                                <li><i class="fa-solid fa-check"></i> Energetic Zaffa Musical Grand Entrance</li>
+                                <li><i class="fa-solid fa-check"></i> Traditional Dabke Folk Performance</li>
+                                <li><i class="fa-solid fa-check"></i> Oud Fragrance &amp; Arabic Coffee Reception</li>
+                            </ul>
+                            <div class="card-footer">
+                                <span style="font-size: 0.85rem; color: var(--muted-gray);"><i class="fa-regular fa-clock"></i> Evening Gala</span>
+                                <a href="#preferences" class="card-link" onclick="quickSelectTradition('Middle Eastern (Zaffa & Katb Al-Kitab)')">
+                                    Plan This <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Western Classic Vows & Unity Ritual -->
+                    <article class="tradition-card" data-category="western">
+                        <div class="card-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80');">
+                            <span class="card-tag"><i class="fa-solid fa-ring"></i> Western Classic</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">White Wedding &amp; Unity Vows</h3>
+                            <p class="card-text">
+                                Timeless chapel or garden wedding featuring the white gown, flower girls, unity candle lighting, personal vows, and the celebratory first dance.
+                            </p>
+                            <ul class="tradition-rituals-list">
+                                <li><i class="fa-solid fa-check"></i> Walking Down the Aisle with Father/Escort</li>
+                                <li><i class="fa-solid fa-check"></i> Exchange of Wedding Rings &amp; Sacred Vows</li>
+                                <li><i class="fa-solid fa-check"></i> Bouquet Toss &amp; Champagne Toast</li>
+                            </ul>
+                            <div class="card-footer">
+                                <span style="font-size: 0.85rem; color: var(--muted-gray);"><i class="fa-regular fa-clock"></i> Ceremony &amp; Ball</span>
+                                <a href="#preferences" class="card-link" onclick="quickSelectTradition('Western Classic (White Wedding)')">
+                                    Plan This <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5: East Asian Tea Ceremony -->
+                    <article class="tradition-card" data-category="east-asian">
+                        <div class="card-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=700&q=80');">
+                            <span class="card-tag"><i class="fa-solid fa-mug-hot"></i> East Asian</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Sacred Tea Ceremony</h3>
+                            <p class="card-text">
+                                A heartfelt tradition showing filial piety and respect to elders, where the couple serves sweet lotus tea and receives red envelopes (Hongbao) and blessings.
+                            </p>
+                            <ul class="tradition-rituals-list">
+                                <li><i class="fa-solid fa-check"></i> Traditional Qipao &amp; Hanbok Attire</li>
+                                <li><i class="fa-solid fa-check"></i> Serving Sweet Lotus Seed &amp; Red Date Tea</li>
+                                <li><i class="fa-solid fa-check"></i> Presentation of Gold Dragon &amp; Phoenix Bangles</li>
+                            </ul>
+                            <div class="card-footer">
+                                <span style="font-size: 0.85rem; color: var(--muted-gray);"><i class="fa-regular fa-clock"></i> Morning Respect</span>
+                                <a href="#preferences" class="card-link" onclick="quickSelectTradition('East Asian Heritage (Tea Ceremony)')">
+                                    Plan This <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6: Desi Walima Reception -->
+                    <article class="tradition-card" data-category="desi">
+                        <div class="card-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=700&q=80');">
+                            <span class="card-tag"><i class="fa-solid fa-crown"></i> Walima Banquet</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Walima Banquet of Grace</h3>
+                            <p class="card-text">
+                                The formal wedding dinner hosted by the groom’s family to celebrate marital union, marked by pastel royalty, gourmet Mughal cuisine, and warm hospitality.
+                            </p>
+                            <ul class="tradition-rituals-list">
+                                <li><i class="fa-solid fa-check"></i> Pastel Elegance &amp; Crystal Chandelier Stage</li>
+                                <li><i class="fa-solid fa-check"></i> Gourmet Biryani, Mutton Qorma &amp; Kheer</li>
+                                <li><i class="fa-solid fa-check"></i> Family Photo Sessions &amp; Salamis</li>
+                            </ul>
+                            <div class="card-footer">
+                                <span style="font-size: 0.85rem; color: var(--muted-gray);"><i class="fa-regular fa-clock"></i> Evening Dinner</span>
+                                <a href="#preferences" class="card-link" onclick="quickSelectTradition('South Asian (Mehndi/Barat/Walima)')">
+                                    Plan This <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 2: Cultural Preferences Configurator Section -->
+        <section class="section-padding preferences-section" id="preferences">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Tailored To Your Heritage</span>
+                    <h2 class="section-title">Cultural Preferences Planner</h2>
+                    <p class="section-desc">
+                        Select your preferred wedding tradition, custom rituals, bridal attire motifs, catering tastes, and music style. See your bespoke event package update in real time.
+                    </p>
+                </div>
+
+                <div class="preferences-container">
+                    
+                    <!-- Preference Selection Form (Contributed by Jaweria) -->
+                    <div class="preference-box">
+                        <form id="culturalPreferenceForm" onsubmit="handlePreferenceSubmit(event)">
+                            
+                            <!-- 1. Tradition Origin -->
+                            <div class="form-group-custom">
+                                <label><i class="fa-solid fa-globe"></i> 1. Select Primary Cultural Tradition</label>
+                                <span class="help-text">Choose the core cultural theme for your wedding celebrations</span>
+                                <div class="option-grid">
+                                    <div class="selectable-chip active" onclick="selectCulture('South Asian (Desi Traditional)', 2500, this)">
+                                        <i class="fa-solid fa-sun"></i>
+                                        <span>South Asian (Desi)</span>
+                                    </div>
+                                    <div class="selectable-chip" onclick="selectCulture('Middle Eastern / Arab Glam', 2800, this)">
+                                        <i class="fa-solid fa-moon"></i>
+                                        <span>Middle Eastern</span>
+                                    </div>
+                                    <div class="selectable-chip" onclick="selectCulture('Western Classic Chic', 2200, this)">
+                                        <i class="fa-solid fa-gem"></i>
+                                        <span>Western Classic</span>
+                                    </div>
+                                    <div class="selectable-chip" onclick="selectCulture('East Asian Heritage', 2400, this)">
+                                        <i class="fa-solid fa-fan"></i>
+                                        <span>East Asian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2. Cultural Rituals & Customs Checklist -->
+                            <div class="form-group-custom">
+                                <label><i class="fa-solid fa-list-check"></i> 2. Ceremonial Rituals to Include</label>
+                                <span class="help-text">Select every cultural custom you wish to feature in your ceremony</span>
+                                <div class="rituals-checklist">
+                                    <label class="check-item">
+                                        <input type="checkbox" name="rituals" value="Bridal Henna / Mehndi Night" checked onchange="updateRitualSummary()">
+                                        <span>Bridal Henna Night</span>
+                                    </label>
+                                    <label class="check-item">
+                                        <input type="checkbox" name="rituals" value="Sacred Nikkah / Vows Ceremony" checked onchange="updateRitualSummary()">
+                                        <span>Sacred Nikkah / Vows</span>
+                                    </label>
+                                    <label class="check-item">
+                                        <input type="checkbox" name="rituals" value="Groom Sehra Bandi / Procession" checked onchange="updateRitualSummary()">
+                                        <span>Groom Procession (Barat)</span>
+                                    </label>
+                                    <label class="check-item">
+                                        <input type="checkbox" name="rituals" value="Rukhsati / Sentimental Farewell" checked onchange="updateRitualSummary()">
+                                        <span>Rukhsati / Farewell</span>
+                                    </label>
+                                    <label class="check-item">
+                                        <input type="checkbox" name="rituals" value="Dholak & Folk Dance Floor" onchange="updateRitualSummary()">
+                                        <span>Dholak &amp; Dance Floor</span>
+                                    </label>
+                                    <label class="check-item">
+                                        <input type="checkbox" name="rituals" value="Traditional Tea / Coffee Welcome" onchange="updateRitualSummary()">
+                                        <span>Tea / Coffee Ceremony</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 3. Traditional Attire & Styling Preference -->
+                            <div class="form-group-custom">
+                                <label><i class="fa-solid fa-vest-patches"></i> 3. Attire &amp; Styling Preference</label>
+                                <span class="help-text">What style of cultural wardrobe coordination do you envision?</span>
+                                <select class="input-field" id="attirePreference" onchange="updateFieldSummary('attire', this.value)">
+                                    <option value="Royal Mughal Lehenga & Sherwani" selected>Royal Mughal Lehenga &amp; Velvet Sherwani</option>
+                                    <option value="Pastel Minimalist Silk & Jacquard">Pastel Minimalist Silk &amp; Jacquard Kurta</option>
+                                    <option value="Classic White A-Line Gown & Black Tuxedo">Classic White A-Line Gown &amp; Black Tuxedo</option>
+                                    <option value="Embroidered Arabian Kaftan & Bisht">Embroidered Arabian Kaftan &amp; Royal Bisht</option>
+                                    <option value="Crimson Silk Dragon Qipao / Cheongsam">Crimson Silk Dragon Qipao / Cheongsam</option>
+                                </select>
+                            </div>
+
+                            <!-- 4. Cultural Cuisine & Catering Style -->
+                            <div class="form-group-custom">
+                                <label><i class="fa-solid fa-utensils"></i> 4. Traditional Cuisine &amp; Dining</label>
+                                <span class="help-text">Select the culinary tradition for your wedding banquet</span>
+                                <select class="input-field" id="cuisinePreference" onchange="updateFieldSummary('cuisine', this.value)">
+                                    <option value="Authentic Desi Royal Buffet (Biryani, Qorma, Kebabs)" selected>Authentic Desi Royal Buffet (Dum Biryani, Qorma, Seekh Kebabs)</option>
+                                    <option value="Mandi, Mezze & Arabian BBQ Grills">Mandi, Hummus Mezze &amp; Arabian BBQ Grills</option>
+                                    <option value="3-Course Gourmet Continental Plated Dinner">3-Course Gourmet Continental Plated Dinner</option>
+                                    <option value="Imperial Asian Banquet with Dim Sum Bar">Imperial Asian Banquet with Dim Sum Bar</option>
+                                    <option value="Fusion East-Meets-West Live Cooking Stations">Fusion East-Meets-West Live Cooking Stations</option>
+                                </select>
+                            </div>
+
+                            <!-- 5. Cultural Music & Entertainment -->
+                            <div class="form-group-custom">
+                                <label><i class="fa-solid fa-music"></i> 5. Music &amp; Ambiance Style</label>
+                                <span class="help-text">Select your preferred entertainment genre</span>
+                                <div class="option-grid">
+                                    <div class="selectable-chip active" onclick="selectMusic('Sufi Live Qawwali & Folk Dhol', this)">
+                                        <i class="fa-solid fa-drum"></i>
+                                        <span>Folk Dhol &amp; Qawwali</span>
+                                    </div>
+                                    <div class="selectable-chip" onclick="selectMusic('Live Arabian Dabke & Oud Ensemble', this)">
+                                        <i class="fa-solid fa-guitar"></i>
+                                        <span>Arabian Dabke &amp; Oud</span>
+                                    </div>
+                                    <div class="selectable-chip" onclick="selectMusic('String Quartet & Acoustic Jazz', this)">
+                                        <i class="fa-solid fa-violin"></i>
+                                        <span>Classical String Quartet</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Guest Count & Date -->
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                                <div>
+                                    <label style="font-size: 0.9rem; font-weight: 600; color: var(--primary-burgundy);">Expected Guests</label>
+                                    <input type="number" class="input-field" id="guestCount" value="250" min="50" max="2000" onchange="calculateEstimate()">
+                                </div>
+                                <div>
+                                    <label style="font-size: 0.9rem; font-weight: 600; color: var(--primary-burgundy);">Wedding Season</label>
+                                    <select class="input-field" id="weddingSeason" onchange="updateFieldSummary('season', this.value)">
+                                        <option value="Winter Royale (Nov - Feb)">Winter Royale (Nov - Feb)</option>
+                                        <option value="Spring Bloom (Mar - Apr)">Spring Bloom (Mar - Apr)</option>
+                                        <option value="Autumn Golden (Sep - Oct)">Autumn Golden (Sep - Oct)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-submit-preferences">
+                                <i class="fa-solid fa-paper-plane"></i> Save &amp; Generate Wedding Custom Package
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Live Dynamic Summary Box (Jaweria's Interactive Component) -->
+                    <aside class="summary-card" aria-label="Selected Preferences Live Summary">
+                        <div class="summary-header">
+                            <h3>Wedding Blueprint</h3>
+                            <p>Live Custom Cultural Summary</p>
+                        </div>
+
+                        <ul class="summary-list">
+                            <li>
+                                <span class="label"><i class="fa-solid fa-landmark"></i> Tradition:</span>
+                                <span class="value" id="summaryCulture">South Asian (Desi)</span>
+                            </li>
+                            <li>
+                                <span class="label"><i class="fa-solid fa-shirt"></i> Attire:</span>
+                                <span class="value" id="summaryAttire">Royal Mughal Lehenga</span>
+                            </li>
+                            <li>
+                                <span class="label"><i class="fa-solid fa-bowl-food"></i> Dining:</span>
+                                <span class="value" id="summaryCuisine">Desi Royal Buffet</span>
+                            </li>
+                            <li>
+                                <span class="label"><i class="fa-solid fa-headphones"></i> Music:</span>
+                                <span class="value" id="summaryMusic">Folk Dhol &amp; Qawwali</span>
+                            </li>
+                            <li>
+                                <span class="label"><i class="fa-solid fa-users"></i> Gathering:</span>
+                                <span class="value" id="summaryGuests">250 Guests</span>
+                            </li>
+                            <li>
+                                <span class="label"><i class="fa-solid fa-calendar-days"></i> Season:</span>
+                                <span class="value" id="summarySeason">Winter Royale</span>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-burgundy);">Included Rituals:</span>
+                            <div class="selected-rituals-pills" id="ritualsBadgeContainer">
+                                <!-- Dynamically filled with JS -->
+                            </div>
+                        </div>
+
+                        <div class="summary-footer">
+                            <div class="est-label">Estimated Planner Package</div>
+                            <div class="est-val" id="estimatedCost">$3,750 USD</div>
+                            <small style="color: var(--muted-gray); font-size: 0.78rem;">*Customizable based on guest count &amp; decor options</small>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Feedback Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-box">
+            <div class="modal-icon">
+                <i class="fa-solid fa-heart-circle-check"></i>
+            </div>
+            <h3 class="modal-title">Custom Plan Reserved!</h3>
+            <p class="modal-desc" id="modalConfirmationText">
+                Thank you! Your custom cultural wedding preferences have been compiled by the <strong>Petal &amp; Promise</strong> team (Cultural Coordination Lead: <strong>Jaweria</strong>).
+            </p>
+            <button class="btn btn-gold" onclick="closeModal()" style="width: 100%;">
+                <i class="fa-solid fa-check"></i> Done
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-gold); margin-bottom: 12px;">Petal &amp; Promise</h3>
+                    <p>
+                        Crafting soulful cultural weddings where sacred heritage meets modern luxury. Curated with devotion to ensure every tradition is cherished.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Tradition Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#traditions">Desi Mayun &amp; Mehndi</a></li>
+                        <li><a href="#traditions">Sacred Nikkah &amp; Barat</a></li>
+                        <li><a href="#traditions">Arab Zaffa &amp; Dabke</a></li>
+                        <li><a href="#traditions">Western Unity Ceremonies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Project Credits</h4>
+                    <ul class="footer-links">
+                        <li>Course: <strong>IICT 2026</strong></li>
+                        <li>Project: <strong>Wedding Planner Portal</strong></li>
+                        <li>Lead Developer: <strong>Jaweria</strong></li>
+                        <li>Section: <strong>Cultural Traditions &amp; Preferences</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Petal &amp; Promise Wedding Planners. Designed &amp; Developed for IICT by <span class="jaweria-tag">Jaweria</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactive Functionality (By Jaweria) -->
+    <script>
+        // State store for preferences
+        const weddingState = {
+            culture: 'South Asian (Desi Traditional)',
+            basePrice: 2500,
+            attire: 'Royal Mughal Lehenga & Sherwani',
+            cuisine: 'Authentic Desi Royal Buffet (Biryani, Qorma, Kebabs)',
+            music: 'Sufi Live Qawwali & Folk Dhol',
+            season: 'Winter Royale (Nov - Feb)',
+            guests: 250,
+            rituals: []
+        };
+
+        // Filter Cultural Traditions Cards
+        function filterTraditions(category, buttonElement) {
+            // Update active button
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            buttonElement.classList.add('active');
+
+            // Filter cards
+            const cards = document.querySelectorAll('.tradition-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Quick Select Tradition from Card button
+        function quickSelectTradition(traditionName) {
+            weddingState.culture = traditionName;
+            document.getElementById('summaryCulture').textContent = traditionName;
+            calculateEstimate();
+        }
+
+        // Select Culture Chip
+        function selectCulture(cultureName, baseCost, element) {
+            // Highlight chip
+            const parent = element.parentElement;
+            parent.querySelectorAll('.selectable-chip').forEach(chip => chip.classList.remove('active'));
+            element.classList.add('active');
+
+            weddingState.culture = cultureName;
+            weddingState.basePrice = baseCost;
+            document.getElementById('summaryCulture').textContent = cultureName;
+            calculateEstimate();
+        }
+
+        // Select Music Chip
+        function selectMusic(musicStyle, element) {
+            const parent = element.parentElement;
+            parent.querySelectorAll('.selectable-chip').forEach(chip => chip.classList.remove('active'));
+            element.classList.add('active');
+
+            weddingState.music = musicStyle;
+            document.getElementById('summaryMusic').textContent = musicStyle;
+        }
+
+        // Update single fields
+        function updateFieldSummary(type, value) {
+            if (type === 'attire') {
+                weddingState.attire = value;
+                document.getElementById('summaryAttire').textContent = value.split('&')[0];
+            } else if (type === 'cuisine') {
+                weddingState.cuisine = value;
+                document.getElementById('summaryCuisine').textContent = value.split('(')[0];
+            } else if (type === 'season') {
+                weddingState.season = value;
+                document.getElementById('summarySeason').textContent = value.split('(')[0];
+            }
+        }
+
+        // Update Rituals Checklist & Pills
+        function updateRitualSummary() {
+            const checkedBoxes = document.querySelectorAll('input[name="rituals"]:checked');
+            const container = document.getElementById('ritualsBadgeContainer');
+            container.innerHTML = '';
+            
+            weddingState.rituals = [];
+            checkedBoxes.forEach(box => {
+                weddingState.rituals.push(box.value);
+                const badge = document.createElement('span');
+                badge.className = 'ritual-badge';
+                badge.innerHTML = `<i class="fa-solid fa-star" style="font-size: 0.65rem;"></i> ${box.value}`;
+                container.appendChild(badge);
+            });
+
+            calculateEstimate();
+        }
+
+        // Calculate Cost Estimate
+        function calculateEstimate() {
+            const guestInput = document.getElementById('guestCount');
+            const guests = parseInt(guestInput.value) || 200;
+            weddingState.guests = guests;
+            document.getElementById('summaryGuests').textContent = guests + ' Guests';
+
+            // Formula: base culture price + ($5 per guest) + ($150 per custom ritual)
+            const ritualCost = weddingState.rituals.length * 150;
+            const guestCost = guests * 5;
+            const total = weddingState.basePrice + guestCost + ritualCost;
+
+            document.getElementById('estimatedCost').textContent = '$' + total.toLocaleString() + ' USD';
+        }
+
+        // Handle Form Submission
+        function handlePreferenceSubmit(e) {
+            e.preventDefault();
+            const modal = document.getElementById('successModal');
+            const message = document.getElementById('modalConfirmationText');
+
+            message.innerHTML = `Your customized <strong>${weddingState.culture}</strong> wedding package for <strong>${weddingState.guests} guests</strong> with <strong>${weddingState.rituals.length} sacred rituals</strong> has been compiled successfully!<br><br><span style="color:var(--primary-gold)">Curated for IICT Module by Jaweria.</span>`;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('active');
+        }
+
+        // Initial setup on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            updateRitualSummary();
+            calculateEstimate();
+        });
+    </script>
+</body>
+</html>

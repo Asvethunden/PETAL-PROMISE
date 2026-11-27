@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    ============================================================================
+    IICT SEMESTER PROJECT - SUBMISSION DAY 3: FULLY INTERACTIVE WEB APPLICATION
+    ============================================================================
+    Student Name: Jaweria Junejo
+    Roll Number: 26i-3206
+    Section: SE-D
+    Course: Introduction to Information & Communication Technologies (IICT)
+    Project Name: Petal & Promise - Wedding Planning Portal
+    Assigned Module: Cultural Weddings, Wedding Traditions & Cultural Preferences
+    Day 3 Deliverable: Dynamic Filter Logic, Real-Time Package Estimator, Form Validation
+    ============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Final Submission: Interactive Cultural Weddings | Jaweria (26i-3206)</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- External CSS for Day 3 -->
+    <link rel="stylesheet" href="day3_styles.css">
+</head>
+<body>
+
+    <!-- Academic Metadata Badge -->
+    <aside class="academic-badge">
+        <div class="container">
+            <div>
+                <strong>IICT Semester Project</strong> | Section: <strong>SE-D</strong>
+            </div>
+            <div>
+                Module: <strong>Cultural Weddings, Traditions &amp; Cultural Preferences</strong>
+                <span class="badge-tag">Final Day 3 by Jaweria Junejo (26i-3206)</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-flex">
+            <a href="#" class="brand-title">
+                Petal &amp; <span>Promise</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#traditions" class="active">Traditions</a></li>
+                <li><a href="#customs">Customs</a></li>
+                <li><a href="#preferences">Cultural Preferences</a></li>
+                <li><a href="#planner">Planner</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-banner">
+            <div class="container">
+                <p class="hero-subtitle">Part 1: Cultural Weddings Showcase</p>
+                <h1 class="hero-headline">Sacred Heritage &amp; <span>Timeless Unions</span></h1>
+                <p class="hero-subtext">
+                    From joyous South Asian Mehndi beats to elegant Western vows and Arab Zaffa processions, 
+                    we craft breathtaking weddings that celebrate the authenticity of your cultural heritage.
+                </p>
+                <div class="hero-btn-group">
+                    <a href="#traditions" class="btn-primary">Explore Traditions</a>
+                    <a href="#preferences" class="btn-secondary">Design Your Wedding</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: Wedding Traditions Grid with Day 3 Dynamic Filtering -->
+        <section class="content-section" id="traditions">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="section-label">A World of Heritage</span>
+                    <h2 class="section-title">Part 2: Iconic Wedding Traditions</h2>
+                    <p class="section-desc">
+                        Select a cultural category below to dynamically filter traditions and their sacred ceremonies.
+                    </p>
+                </div>
+
+                <!-- Day 3 Dynamic Category Filter Tabs -->
+                <nav class="filter-tab-bar" aria-label="Culture Filter Tabs">
+                    <button class="filter-tab-btn active" onclick="filterTraditions('all', this)">All Traditions</button>
+                    <button class="filter-tab-btn" onclick="filterTraditions('desi', this)">Desi (South Asian)</button>
+                    <button class="filter-tab-btn" onclick="filterTraditions('middle-east', this)">Middle Eastern (Arab)</button>
+                    <button class="filter-tab-btn" onclick="filterTraditions('western', this)">Western Classic</button>
+                    <button class="filter-tab-btn" onclick="filterTraditions('east-asian', this)">East Asian Heritage</button>
+                </nav>
+
+                <div class="traditions-grid" id="traditionsGrid">
+                    
+                    <!-- Card 1: Desi Mehndi -->
+                    <article class="tradition-card" data-category="desi">
+                        <div class="card-img-placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80');">
+                            <span class="card-tag">South Asian</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Mehndi &amp; Mayun</h3>
+                            <p class="card-desc">Vibrant nights of turmeric application (Ubtan), intricate floral henna motifs, and celebratory Dholak rhythm.</p>
+                            <ul class="ritual-highlights">
+                                <li>Bridal Henna Application</li>
+                                <li>Rasm-e-Heena &amp; Mithai Sharing</li>
+                                <li>Marigold &amp; Genda Phool Decor</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Nikkah & Barat -->
+                    <article class="tradition-card" data-category="desi">
+                        <div class="card-img-placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80');">
+                            <span class="card-tag">Sacred Desi</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Nikkah &amp; Barat</h3>
+                            <p class="card-desc">Solemnization of marriage vows (Ijab-o-Qubool), signing of Nikkahnama, followed by royal Barat entry and poignant Rukhsati.</p>
+                            <ul class="ritual-highlights">
+                                <li>Floral Dupatta Veil Solemnization</li>
+                                <li>Groom Sehra Bandi Procession</li>
+                                <li>Doodh Pilai &amp; Joota Chupai Customs</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Arab Zaffa -->
+                    <article class="tradition-card" data-category="middle-east">
+                        <div class="card-img-placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80');">
+                            <span class="card-tag">Middle Eastern</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Zaffa &amp; Katb Al-Kitab</h3>
+                            <p class="card-desc">High-energy Arabic musical entrance with bagpipes, bendir drums, Dabke dancers, and the sacred Katb Al-Kitab contract.</p>
+                            <ul class="ritual-highlights">
+                                <li>Spirited Zaffa Entrance Band</li>
+                                <li>Live Dabke Folk Performance</li>
+                                <li>Oud Fragrance &amp; Arabic Coffee</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Western Classic -->
+                    <article class="tradition-card" data-category="western">
+                        <div class="card-img-placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80');">
+                            <span class="card-tag">Western Classic</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">White Wedding &amp; Vows</h3>
+                            <p class="card-desc">Romantic cathedral or garden setting with personal vows, ring exchanges, unity candle lighting, and champagne toasts.</p>
+                            <ul class="ritual-highlights">
+                                <li>Bridal Aisle Processional</li>
+                                <li>Ring Exchange &amp; Unity Candle</li>
+                                <li>First Dance &amp; Bouquet Toss</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 5: East Asian Tea Ceremony -->
+                    <article class="tradition-card" data-category="east-asian">
+                        <div class="card-img-placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80');">
+                            <span class="card-tag">East Asian</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Sacred Tea Ceremony</h3>
+                            <p class="card-desc">Serving sweet tea to parents and elders in deep gratitude, receiving auspicious red envelopes (Hongbao) and generational blessings.</p>
+                            <ul class="ritual-highlights">
+                                <li>Red &amp; Gold Silk Qipao Attire</li>
+                                <li>Sweet Lotus Seed Tea Serving</li>
+                                <li>Gold Dragon &amp; Phoenix Bangles</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 6: Walima Reception -->
+                    <article class="tradition-card" data-category="desi">
+                        <div class="card-img-placeholder" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=600&q=80');">
+                            <span class="card-tag">Walima Banquet</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Royal Walima Feast</h3>
+                            <p class="card-desc">A formal banquet of grace hosted by the groom's family to celebrate marriage, with pastel elegance and gourmet Mughal dining.</p>
+                            <ul class="ritual-highlights">
+                                <li>Pastel Chandelier Stage Decor</li>
+                                <li>Dum Biryani &amp; Mughlai Delicacies</li>
+                                <li>Formal Family Salamis &amp; Speeches</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Cultural Preferences & Planner Form Section -->
+        <section class="content-section" id="preferences" style="background: #fbf7f2;">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="section-label">Tailored For You</span>
+                    <h2 class="section-title">Part 3: Cultural Preferences Customizer</h2>
+                    <p class="section-desc">
+                        Select your preferred wedding tradition, custom rituals, wardrobe style, catering tastes, and music.
+                    </p>
+                </div>
+
+                <div class="preferences-layout">
+                    
+                    <!-- Preference Customization Form -->
+                    <div class="form-card">
+                        <form id="preferencesInteractiveForm" onsubmit="handleFormSubmit(event)">
+                            
+                            <!-- Client Info -->
+                            <div class="preference-group">
+                                <label class="group-heading">Couple / Family Name</label>
+                                <input type="text" id="clientName" class="form-input" placeholder="e.g. Ayesha &amp; Bilal" required>
+                            </div>
+
+                            <!-- 1. Cultural Tradition -->
+                            <div class="preference-group">
+                                <label class="group-heading">1. Select Primary Cultural Tradition</label>
+                                <span class="group-note">Choose the core cultural theme for your wedding celebrations</span>
+                                <div class="radio-pill-group">
+                                    <div class="selectable-pill active" onclick="selectCultureTheme('South Asian (Desi)', 'desi', 2500, this)">
+                                        <span>South Asian (Desi)</span>
+                                    </div>
+                                    <div class="selectable-pill" onclick="selectCultureTheme('Middle Eastern / Arab', 'arab', 2800, this)">
+                                        <span>Middle Eastern</span>
+                                    </div>
+                                    <div class="selectable-pill" onclick="selectCultureTheme('Western Classic', 'western', 2200, this)">
+                                        <span>Western Classic</span>
+                                    </div>
+                                    <div class="selectable-pill" onclick="selectCultureTheme('East Asian Heritage', 'east-asian', 2400, this)">
+                                        <span>East Asian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2. Rituals Checklist -->
+                            <div class="preference-group">
+                                <label class="group-heading">2. Ceremonial Rituals to Include</label>
+                                <span class="group-note">Select every custom you wish our coordinators to organize</span>
+                                <div class="checklist-grid">
+                                    <label class="check-pill">
+                                        <input type="checkbox" name="cultural_rituals" value="Bridal Henna Night" checked onchange="onRitualsUpdate()">
+                                        <span>Bridal Henna Night</span>
+                                    </label>
+                                    <label class="check-pill">
+                                        <input type="checkbox" name="cultural_rituals" value="Sacred Nikkah / Vows" checked onchange="onRitualsUpdate()">
+                                        <span>Sacred Nikkah / Vows</span>
+                                    </label>
+                                    <label class="check-pill">
+                                        <input type="checkbox" name="cultural_rituals" value="Groom Barat Procession" checked onchange="onRitualsUpdate()">
+                                        <span>Groom Barat Procession</span>
+                                    </label>
+                                    <label class="check-pill">
+                                        <input type="checkbox" name="cultural_rituals" value="Rukhsati / Farewell" checked onchange="onRitualsUpdate()">
+                                        <span>Rukhsati / Farewell</span>
+                                    </label>
+                                    <label class="check-pill">
+                                        <input type="checkbox" name="cultural_rituals" value="Dholak Dance Floor" onchange="onRitualsUpdate()">
+                                        <span>Dholak Dance Floor</span>
+                                    </label>
+                                    <label class="check-pill">
+                                        <input type="checkbox" name="cultural_rituals" value="Tea & Coffee Welcome" onchange="onRitualsUpdate()">
+                                        <span>Tea &amp; Coffee Welcome</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- 3. Attire Preference -->
+                            <div class="preference-group">
+                                <label class="group-heading">3. Traditional Attire &amp; Styling Preference</label>
+                                <select class="form-select" id="attireDropdown" onchange="onAttireChange(this)">
+                                    <option>Royal Mughal Hand-Embroidered Lehenga &amp; Sherwani</option>
+                                    <option>Pastel Minimalist Silk &amp; Jacquard Prince Coat</option>
+                                    <option>Embroidered Arabian Kaftan &amp; Royal Gold-Trimmed Bisht</option>
+                                    <option>Classic Victorian White Gown &amp; Black Tuxedo</option>
+                                    <option>Crimson Dragon Silk Qipao / Korean Royal Hanbok</option>
+                                </select>
+                            </div>
+
+                            <!-- 4. Dining Style -->
+                            <div class="preference-group">
+                                <label class="group-heading">4. Traditional Cuisine &amp; Catering</label>
+                                <select class="form-select" id="cuisineDropdown" onchange="onCuisineChange(this)">
+                                    <option>Authentic Desi Royal Buffet (Dum Biryani, Qorma, Kebabs)</option>
+                                    <option>Mandi, Hummus Mezze &amp; Arabian BBQ Grills</option>
+                                    <option>3-Course Gourmet Continental Plated Dinner</option>
+                                    <option>Imperial Asian Banquet with Dim Sum Bar</option>
+                                </select>
+                            </div>
+
+                            <!-- 5. Music Preference -->
+                            <div class="preference-group">
+                                <label class="group-heading">5. Music &amp; Ambiance Style</label>
+                                <div class="radio-pill-group">
+                                    <div class="selectable-pill active" onclick="selectMusicStyle('Folk Dhol & Qawwali', this)">
+                                        <span>Folk Dhol &amp; Qawwali</span>
+                                    </div>
+                                    <div class="selectable-pill" onclick="selectMusicStyle('Arabian Dabke & Oud', this)">
+                                        <span>Arabian Dabke &amp; Oud</span>
+                                    </div>
+                                    <div class="selectable-pill" onclick="selectMusicStyle('String Quartet', this)">
+                                        <span>String Quartet</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 6. Guest Count -->
+                            <div class="preference-group">
+                                <label class="group-heading">6. Expected Guest Count</label>
+                                <input type="number" id="inputGuests" class="form-input" value="250" min="50" max="2500" oninput="recalculatePackage()">
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+                                Save &amp; Finalize Wedding Custom Package
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Day 3 Dynamic Live Blueprint Summary Box -->
+                    <aside class="summary-blueprint">
+                        <div class="blueprint-header">
+                            <h3>Wedding Blueprint</h3>
+                            <p style="font-size: 0.85rem; color: var(--muted-gray);">Day 3 Real-Time Dynamic Summary</p>
+                        </div>
+                        <ul class="blueprint-list">
+                            <li><span class="prop">Tradition:</span> <span class="val" id="blueprintCulture">South Asian (Desi)</span></li>
+                            <li><span class="prop">Attire:</span> <span class="val" id="blueprintAttire">Royal Mughal Lehenga</span></li>
+                            <li><span class="prop">Cuisine:</span> <span class="val" id="blueprintCuisine">Authentic Desi Buffet</span></li>
+                            <li><span class="prop">Music:</span> <span class="val" id="blueprintMusic">Folk Dhol &amp; Qawwali</span></li>
+                            <li><span class="prop">Guests:</span> <span class="val" id="blueprintGuests">250 Guests</span></li>
+                        </ul>
+
+                        <div>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-burgundy);">Active Rituals:</span>
+                            <div class="ritual-tags-wrapper" id="blueprintRitualsContainer"></div>
+                        </div>
+
+                        <div class="blueprint-estimate">
+                            <small>Dynamic Estimated Package</small>
+                            <strong id="blueprintTotalPrice">$4,480 USD</strong>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Dialog Popup (Day 3 Feature) -->
+    <div class="modal-backdrop" id="confirmationModal">
+        <div class="modal-card">
+            <div class="modal-icon-circle">✓</div>
+            <h3 style="font-size: 1.6rem; color: var(--primary-burgundy); margin-bottom: 12px;">Package Reserved!</h3>
+            <div id="modalDynamicContent" style="font-size: 0.95rem; text-align: left; margin-bottom: 20px; line-height: 1.8;"></div>
+            <button type="button" class="btn-primary" style="width: 100%; justify-content: center;" onclick="closeSuccessModal()">
+                Close &amp; Confirm
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: var(--primary-gold); margin-bottom: 12px; font-family: 'Playfair Display', serif;">Petal &amp; Promise</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7;">
+                        Where cultural sacred heritage meets modern luxury. Curated with devotion to ensure every tradition is cherished.
+                    </p>
+                </div>
+                <div>
+                    <h4>Ceremonial Links</h4>
+                    <ul>
+                        <li><a href="#traditions">Desi Mayun &amp; Mehndi</a></li>
+                        <li><a href="#traditions">Sacred Nikkah &amp; Barat</a></li>
+                        <li><a href="#traditions">Arab Zaffa Procession</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>IICT Project Details</h4>
+                    <ul>
+                        <li>Course: <strong>IICT (SE-D)</strong></li>
+                        <li>Student: <strong>Jaweria Junejo</strong></li>
+                        <li>Roll No: <strong>26i-3206</strong></li>
+                        <li>Milestone: <strong>Day 3 (JavaScript &amp; Logic)</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Petal &amp; Promise. Day 3 Final Submission by <strong>Jaweria Junejo (26i-3206)</strong>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Day 3 External JavaScript -->
+    <script src="day3_script.js"></script>
+</body>
+</html>

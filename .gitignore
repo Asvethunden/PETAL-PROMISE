@@ -1,0 +1,12 @@
+# Dependencies & Tooling
+mingit/
+gh_cli/
+*.exe
+*.docx
+*.txt
+.system_generated/
+*.bat
+
+# OS artifacts
+Thumbs.db
+.DS_Store
