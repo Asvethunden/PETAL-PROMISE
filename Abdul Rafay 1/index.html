@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Events | Petal &amp; Promise</title>
+  <meta name="description" content="Plan your Nikkah, Mehndi, Baraat, Walima, and Reception celebrations in the Petal &amp; Promise wedding planner.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="events">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-crest" src="images/floral-crest.svg" alt="Petal and Promise floral crest emblem" width="44" height="44">
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">Wedding Events Planner</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html" aria-current="page">Wedding Events</a></li>
+          <li><a class="nav-link" href="pages/etiquette-guide.html">Etiquette &amp; Timeline</a></li>
+          <li><a class="nav-link nav-link-next" href="../Abdul%20Rafay%202/index.html">Next: Abdul Rafay 2 &rarr;</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Module 1 &middot; Celebration Lineup</span>
+          <h1 id="hero-title">Design Your Wedding Events</h1>
+          <p class="hero-lead">
+            Explore signature Nikkah, Mehndi, and Walima ceremonies, select every celebration in your
+            itinerary including Baraat and Reception, and save your plan locally for the next planning step.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#events-planner">Select Your Events</a>
+            <a class="btn btn-secondary" href="pages/etiquette-guide.html">View Etiquette Guide</a>
+            <span class="status-pill" id="hero-saved-pill" aria-live="polite">0 events selected</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Petal and Promise overview">
+          <img class="hero-crest" src="images/floral-crest.svg" alt="Petal and Promise ivory, blush, and sage wedding crest" width="96" height="96">
+          <p class="hero-note">
+            Selections are saved in browser <code>localStorage</code> under the <code>events</code> key
+            using illustrative data only.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="signature-cards-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="signature-cards-heading">Signature Ceremonies</h2>
+          <p>Review the Nikkah, Mehndi, and Walima cards below, or toggle them directly into your event checklist.</p>
+          <img class="floral-divider" src="images/floral-divider.svg" alt="" aria-hidden="true" width="360" height="36">
+        </div>
+
+        <div class="cards-grid">
+          <article class="event-card" data-event-card="Nikkah">
+            <div class="event-card-top">
+              <img class="event-card-icon" src="images/nikkah-blossom.svg" alt="Nikkah white and blush jasmine blossom icon" width="68" height="68">
+              <div>
+                <span class="event-card-badge">Sacred Vows</span>
+                <h3>Nikkah</h3>
+              </div>
+            </div>
+            <p>
+              An intimate, serene ceremony centered on the marriage contract, blessings from elders, and
+              soft ivory-and-blush floral styling.
+            </p>
+            <ul class="event-meta">
+              <li><strong>Illustrative Timing:</strong> Late morning or afternoon</li>
+              <li><strong>Mood &amp; Palette:</strong> Ivory, soft blush &amp; warm gold accents</li>
+              <li><strong>Typical Setting:</strong> Courtyard garden or sunlit hall</li>
+            </ul>
+            <button
+              type="button"
+              class="card-toggle-btn"
+              data-card-toggle="Nikkah"
+              aria-pressed="false"
+            >
+              Include Nikkah
+            </button>
+          </article>
+
+          <article class="event-card" data-event-card="Mehndi">
+            <div class="event-card-top">
+              <img class="event-card-icon" src="images/mehndi-marigold.svg" alt="Mehndi botanical leaf and petal mandala icon" width="68" height="68">
+              <div>
+                <span class="event-card-badge event-card-badge--sage">Evening Revelry</span>
+                <h3>Mehndi</h3>
+              </div>
+            </div>
+            <p>
+              A lively gathering filled with henna artistry, folk songs, choreographed family dances, and
+              fragrant garland decor.
+            </p>
+            <ul class="event-meta">
+              <li><strong>Illustrative Timing:</strong> Sunset into late evening</li>
+              <li><strong>Mood &amp; Palette:</strong> Sage greenery, dusty rose &amp; festive florals</li>
+              <li><strong>Typical Setting:</strong> Open-air lawn or marquee</li>
+            </ul>
+            <button
+              type="button"
+              class="card-toggle-btn"
+              data-card-toggle="Mehndi"
+              aria-pressed="false"
+            >
+              Include Mehndi
+            </button>
+          </article>
+
+          <article class="event-card" data-event-card="Walima">
+            <div class="event-card-top">
+              <img class="event-card-icon" src="images/walima-rose.svg" alt="Walima soft rose bouquet icon" width="68" height="68">
+              <div>
+                <span class="event-card-badge">Hospitality Feast</span>
+                <h3>Walima</h3>
+              </div>
+            </div>
+            <p>
+              A graceful banquet hosted by the groom&rsquo;s family welcoming relatives and friends with
+              warm conversation and refined table florals.
+            </p>
+            <ul class="event-meta">
+              <li><strong>Illustrative Timing:</strong> Afternoon luncheon or candlelit dinner</li>
+              <li><strong>Mood &amp; Palette:</strong> Rose, ivory, sage &amp; mocha neutrals</li>
+              <li><strong>Typical Setting:</strong> Ballroom or heritage conservatory</li>
+            </ul>
+            <button
+              type="button"
+              class="card-toggle-btn"
+              data-card-toggle="Walima"
+              aria-pressed="false"
+            >
+              Include Walima
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="events-planner" aria-labelledby="planner-heading">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="planner-heading">Build &amp; Save Your Event Itinerary</h2>
+          <p>Choose at least one event (including Baraat and Reception options) and add illustrative planning notes.</p>
+        </div>
+
+        <div class="planner-layout">
+          <form class="panel" id="events-form" novalidate aria-describedby="form-instructions">
+            <p id="form-instructions" class="fieldset-hint">
+              Fields marked with * require a selection before saving. Press Tab to move between controls and Space to toggle checkboxes.
+            </p>
+
+            <fieldset class="events-fieldset" id="events-fieldset" aria-describedby="events-fieldset-hint">
+              <legend>Select Wedding Events *</legend>
+              <p id="events-fieldset-hint" class="fieldset-hint">
+                Pick at least one celebration to save under <code>events</code>.
+              </p>
+
+              <div class="checkbox-grid">
+                <label class="checkbox-option" for="event-nikkah">
+                  <input type="checkbox" id="event-nikkah" name="eventOption" value="Nikkah">
+                  <span>
+                    <span class="checkbox-label-main">Nikkah</span>
+                    <span class="checkbox-label-sub">Sacred marriage ceremony &amp; vows</span>
+                  </span>
+                </label>
+
+                <label class="checkbox-option" for="event-mehndi">
+                  <input type="checkbox" id="event-mehndi" name="eventOption" value="Mehndi">
+                  <span>
+                    <span class="checkbox-label-main">Mehndi</span>
+                    <span class="checkbox-label-sub">Henna night, music &amp; floral garlands</span>
+                  </span>
+                </label>
+
+                <label class="checkbox-option" for="event-baraat">
+                  <input type="checkbox" id="event-baraat" name="eventOption" value="Baraat">
+                  <span>
+                    <span class="checkbox-label-main">Baraat</span>
+                    <span class="checkbox-label-sub">Groom&rsquo;s procession &amp; ceremonial welcome</span>
+                  </span>
+                </label>
+
+                <label class="checkbox-option" for="event-walima">
+                  <input type="checkbox" id="event-walima" name="eventOption" value="Walima">
+                  <span>
+                    <span class="checkbox-label-main">Walima</span>
+                    <span class="checkbox-label-sub">Traditional hospitality banquet</span>
+                  </span>
+                </label>
+
+                <label class="checkbox-option" for="event-reception">
+                  <input type="checkbox" id="event-reception" name="eventOption" value="Reception">
+                  <span>
+                    <span class="checkbox-label-main">Reception</span>
+                    <span class="checkbox-label-sub">Evening celebration, speeches &amp; dinner</span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="couple-names">Couple / Celebration Title</label>
+                <input
+                  type="text"
+                  id="couple-names"
+                  name="coupleNames"
+                  placeholder="e.g., Amina &amp; Zaid (Illustrative)"
+                  autocomplete="off"
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="wedding-city">Preferred City / Region</label>
+                <input
+                  type="text"
+                  id="wedding-city"
+                  name="weddingCity"
+                  placeholder="e.g., Lahore"
+                  autocomplete="off"
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="start-date">Target Start Date</label>
+                <input
+                  type="date"
+                  id="start-date"
+                  name="startDate"
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="guest-estimate">Estimated Guests</label>
+                <input
+                  type="number"
+                  id="guest-estimate"
+                  name="guestEstimate"
+                  min="1"
+                  max="50000"
+                  step="1"
+                  placeholder="e.g., 250"
+                  aria-describedby="guest-hint"
+                >
+                <span id="guest-hint" class="field-hint">Optional positive number (1&ndash;50,000).</span>
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="event-notes">Ceremony Notes &amp; Preferences</label>
+                <textarea
+                  id="event-notes"
+                  name="eventNotes"
+                  rows="3"
+                  placeholder="e.g., Afternoon Nikkah in garden courtyard followed by evening dinner."
+                ></textarea>
+              </div>
+            </div>
+
+            <div id="form-error" class="feedback-banner feedback-error" role="alert" aria-live="assertive" hidden></div>
+            <div id="save-status" class="feedback-banner feedback-success" role="status" aria-live="polite" hidden></div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="save-events-btn">Save Events</button>
+              <button type="button" class="btn btn-secondary" id="load-example-btn">Load Illustrative Example</button>
+              <button type="button" class="btn btn-outline" id="clear-events-btn">Clear Selection</button>
+            </div>
+          </form>
+
+          <aside class="panel summary-panel" aria-labelledby="summary-heading">
+            <div>
+              <h3 id="summary-heading">Saved Itinerary Summary</h3>
+              <p class="fieldset-hint">Reflects the current JSON stored under <code>localStorage.events</code>.</p>
+            </div>
+
+            <div>
+              <strong>Selected Events (<span id="summary-count">0</span>):</strong>
+              <ul class="summary-tags" id="summary-tags" aria-live="polite">
+                <li><span class="fieldset-hint">No events saved yet.</span></li>
+              </ul>
+            </div>
+
+            <dl class="summary-details">
+              <div class="summary-row">
+                <dt>Celebration</dt>
+                <dd id="summary-couple">Not set</dd>
+              </div>
+              <div class="summary-row">
+                <dt>City</dt>
+                <dd id="summary-city">Not set</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Target Date</dt>
+                <dd id="summary-date">Not set</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Guests</dt>
+                <dd id="summary-guests">Not set</dd>
+              </div>
+              <div class="summary-row">
+                <dt>Last Saved</dt>
+                <dd id="summary-updated">Not saved yet</dd>
+              </div>
+            </dl>
+
+            <details>
+              <summary>Inspect saved <code>events</code> JSON</summary>
+              <pre class="code-preview" id="json-preview">{}</pre>
+            </details>
+
+            <div class="handoff-box">
+              <h3>Continue Your Wedding Plan</h3>
+              <p>Once your events are saved, proceed to the next module in our 15-page Petal &amp; Promise planner.</p>
+              <a class="btn btn-sage" href="../Abdul%20Rafay%202/index.html" id="next-module-link">
+                Go to Abdul Rafay 2 &rarr;
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Petal &amp; Promise &middot; Wedding Events Module (Abdul Rafay 1) &middot; Illustrative planning data only.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Wedding Events</a>
+        <a href="pages/etiquette-guide.html">Etiquette &amp; Timeline</a>
+        <a href="../Abdul%20Rafay%202/index.html">Abdul Rafay 2</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
