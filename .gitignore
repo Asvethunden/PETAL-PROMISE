@@ -1,0 +1,10 @@
+# Dependencies & Tooling
+mingit/
+*.exe
+*.docx
+*.txt
+.system_generated/
+
+# OS artifacts
+Thumbs.db
+.DS_Store
