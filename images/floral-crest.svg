@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160" role="img" aria-labelledby="floral-crest-title">
+  <title id="floral-crest-title">Petal and Promise botanical floral crest</title>
+  <rect width="240" height="160" fill="none" />
+  <!-- Sage botanical stems and leaves -->
+  <path d="M120 132 C120 100, 120 78, 120 46" stroke="#A3AC96" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M120 112 C92 106, 68 92, 50 72" stroke="#A3AC96" stroke-width="2.2" stroke-linecap="round" fill="none" />
+  <path d="M120 112 C148 106, 172 92, 190 72" stroke="#A3AC96" stroke-width="2.2" stroke-linecap="round" fill="none" />
+  <path d="M84 100 C74 88, 62 88, 56 96 C66 104, 78 106, 84 100 Z" fill="#A3AC96" opacity="0.85" />
+  <path d="M156 100 C166 88, 178 88, 184 96 C174 104, 162 106, 156 100 Z" fill="#A3AC96" opacity="0.85" />
+  <path d="M102 82 C92 70, 82 68, 76 76 C84 86, 94 88, 102 82 Z" fill="#A3AC96" opacity="0.7" />
+  <path d="M138 82 C148 70, 158 68, 164 76 C156 86, 146 88, 138 82 Z" fill="#A3AC96" opacity="0.7" />
+
+  <!-- Left blush blossom -->
+  <g transform="translate(52, 68)">
+    <circle cx="0" cy="-12" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="11" cy="-3" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="7" cy="10" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="-7" cy="10" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="-11" cy="-3" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="6" fill="#D49AA8" />
+    <circle cx="0" cy="0" r="2.5" fill="#FFF9F5" />
+  </g>
+
+  <!-- Right blush blossom -->
+  <g transform="translate(188, 68)">
+    <circle cx="0" cy="-12" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="11" cy="-3" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="7" cy="10" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="-7" cy="10" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="-11" cy="-3" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="6" fill="#D49AA8" />
+    <circle cx="0" cy="0" r="2.5" fill="#FFF9F5" />
+  </g>
+
+  <!-- Center rose peony -->
+  <g transform="translate(120, 56)">
+    <circle cx="0" cy="-18" r="14" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.4" />
+    <circle cx="17" cy="-6" r="14" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.4" />
+    <circle cx="11" cy="14" r="14" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.4" />
+    <circle cx="-11" cy="14" r="14" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.4" />
+    <circle cx="-17" cy="-6" r="14" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.4" />
+    <circle cx="0" cy="-8" r="10" fill="#D49AA8" opacity="0.85" />
+    <circle cx="8" cy="4" r="10" fill="#D49AA8" opacity="0.85" />
+    <circle cx="-8" cy="4" r="10" fill="#D49AA8" opacity="0.85" />
+    <circle cx="0" cy="0" r="7" fill="#554A45" />
+    <circle cx="-2" cy="-2" r="2" fill="#FFF9F5" />
+  </g>
+
+  <!-- Delicate buds -->
+  <circle cx="92" cy="120" r="4" fill="#D49AA8" />
+  <circle cx="148" cy="120" r="4" fill="#D49AA8" />
+  <path d="M84 134 H156" stroke="#D49AA8" stroke-width="1.5" stroke-linecap="round" />
+</svg>

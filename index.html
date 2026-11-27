@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Customization | Petal &amp; Promise (Yusuf 1)</title>
+  <meta name="description" content="Choose your wedding style and ceremony events in Petal &amp; Promise Wedding Planner.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="customization">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-link" href="index.html">
+        <span class="brand-mark">
+          <img src="images/floral-sprig.svg" alt="Petal and Promise floral monogram" width="30" height="30">
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">Yusuf 1 &middot; Wedding Customization</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html" aria-current="page">Wedding Customization</a>
+        <a class="nav-link" href="pages/ceremony-guide.html">Ceremony Guide</a>
+        <a class="nav-link nav-link-next" href="../Yusuf 2/index.html">Next: Yusuf 2 &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-main">
+    <section class="hero-card" aria-labelledby="page-heading">
+      <div>
+        <span class="hero-badge">Step 1 of Planning &middot; Illustrative Planner</span>
+        <h1 id="page-heading" class="hero-title">Design Your Wedding Style &amp; Events</h1>
+        <p class="hero-description">
+          Select the overarching aesthetic for your celebration and check every ceremony you plan to host.
+          Your preferences are saved locally under the shared <code>wedding</code> profile so downstream pages can tailor your plan.
+        </p>
+      </div>
+      <div class="hero-illustration">
+        <img src="images/floral-crest.svg" alt="Petal and Promise botanical floral crest in blush, rose, and sage" width="240" height="160">
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <img src="images/floral-divider.svg" alt="Decorative floral section divider" width="320" height="36">
+    </div>
+
+    <div class="planner-grid">
+      <section class="card" aria-labelledby="form-card-title">
+        <div class="card-header">
+          <h2 id="form-card-title" class="card-title">Wedding Customization</h2>
+          <p class="card-subtitle">Choose one wedding style and at least one ceremony event.</p>
+        </div>
+
+        <div id="form-feedback" class="feedback-banner" role="status" aria-live="polite" hidden></div>
+
+        <form id="wedding-customization-form" novalidate>
+          <!-- Style Selector -->
+          <fieldset id="style-fieldset" class="planner-fieldset" aria-describedby="style-help">
+            <legend id="style-legend" class="fieldset-legend">1. Wedding Style</legend>
+            <p id="style-help" class="fieldset-help">
+              Pick one visual and cultural direction for palettes, floral styling, and guest experience.
+            </p>
+
+            <div class="style-options" role="radiogroup" aria-labelledby="style-legend">
+
+              <label class="choice-card" for="style-eastern">
+                <input
+                  class="choice-input"
+                  type="radio"
+                  id="style-eastern"
+                  name="style"
+                  value="Eastern"
+                  aria-describedby="desc-eastern"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Eastern</span>
+                  <span id="desc-eastern" class="choice-desc">Heritage florals, warm jewel &amp; blush accents, and traditional ceremony staging.</span>
+                </span>
+              </label>
+
+              <label class="choice-card" for="style-western">
+                <input
+                  class="choice-input"
+                  type="radio"
+                  id="style-western"
+                  name="style"
+                  value="Western"
+                  aria-describedby="desc-western"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Western</span>
+                  <span id="desc-western" class="choice-desc">Garden-inspired ivory &amp; sage minimalism with timeless aisle and banquet styling.</span>
+                </span>
+              </label>
+
+              <label class="choice-card" for="style-fusion">
+                <input
+                  class="choice-input"
+                  type="radio"
+                  id="style-fusion"
+                  name="style"
+                  value="Fusion"
+                  aria-describedby="desc-fusion"
+                  checked
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Fusion</span>
+                  <span id="desc-fusion" class="choice-desc">A cohesive blend of Eastern rituals and Western botanical elegance across events.</span>
+                </span>
+              </label>
+            </div>
+
+            <div id="style-error" class="field-error" role="alert" hidden></div>
+          </fieldset>
+
+          <!-- Event Checkboxes -->
+          <fieldset id="events-fieldset" class="planner-fieldset" aria-describedby="events-help">
+            <legend class="fieldset-legend">2. Wedding Events (Select at least one)</legend>
+            <p id="events-help" class="fieldset-help">
+              Check all ceremonies and celebrations included in your illustrative wedding itinerary.
+            </p>
+
+            <div class="event-toolbar">
+              <span id="event-count" class="selection-count" aria-live="polite">0 events selected</span>
+              <div class="toolbar-actions">
+                <button type="button" class="btn-chip" id="select-all-events">Select All</button>
+                <button type="button" class="btn-chip" id="clear-events">Clear All</button>
+              </div>
+            </div>
+
+            <div class="event-options">
+              <label class="choice-card" for="event-nikkah">
+                <input
+                  class="choice-input"
+                  type="checkbox"
+                  id="event-nikkah"
+                  name="events"
+                  value="Nikkah"
+                  aria-describedby="desc-nikkah"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Nikkah</span>
+                  <span id="desc-nikkah" class="choice-desc">Sacred marriage contract ceremony with intimate floral canopy.</span>
+                </span>
+              </label>
+
+              <label class="choice-card" for="event-mehndi">
+                <input
+                  class="choice-input"
+                  type="checkbox"
+                  id="event-mehndi"
+                  name="events"
+                  value="Mehndi"
+                  aria-describedby="desc-mehndi"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Mehndi</span>
+                  <span id="desc-mehndi" class="choice-desc">Festive henna, music, and marigold-blush courtyard gathering.</span>
+                </span>
+              </label>
+
+              <label class="choice-card" for="event-baraat">
+                <input
+                  class="choice-input"
+                  type="checkbox"
+                  id="event-baraat"
+                  name="events"
+                  value="Baraat"
+                  aria-describedby="desc-baraat"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Baraat</span>
+                  <span id="desc-baraat" class="choice-desc">Grand family procession and celebratory welcome entrance.</span>
+                </span>
+              </label>
+
+              <label class="choice-card" for="event-walima">
+                <input
+                  class="choice-input"
+                  type="checkbox"
+                  id="event-walima"
+                  name="events"
+                  value="Walima"
+                  aria-describedby="desc-walima"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Walima</span>
+                  <span id="desc-walima" class="choice-desc">Graceful post-wedding banquet hosted to honor guests and family.</span>
+                </span>
+              </label>
+
+              <label class="choice-card" for="event-reception">
+                <input
+                  class="choice-input"
+                  type="checkbox"
+                  id="event-reception"
+                  name="events"
+                  value="Reception"
+                  aria-describedby="desc-reception"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Reception</span>
+                  <span id="desc-reception" class="choice-desc">Evening dinner, toasts, and celebratory dance floor.</span>
+                </span>
+              </label>
+            </div>
+
+            <div id="events-error" class="field-error" role="alert" hidden></div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="save-btn">Save Wedding Customization</button>
+            <button type="button" class="btn btn-secondary" id="save-continue-btn">Save &amp; Go to Yusuf 2 &rarr;</button>
+            <button type="button" class="btn btn-outline" id="reset-btn">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Live Summary & LocalStorage Preview -->
+      <aside class="card summary-card" aria-labelledby="summary-heading">
+        <img
+          class="summary-sprig"
+          src="images/floral-sprig.svg"
+          alt="Decorative botanical sprig"
+          width="56"
+          height="56"
+        >
+        <div class="card-header">
+          <h2 id="summary-heading" class="card-title">Saved Selection Summary</h2>
+          <p class="card-subtitle">Synced with <code>localStorage["wedding"]</code>.</p>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">Selected Wedding Style</span>
+          <span id="summary-style" class="summary-value">Fusion</span>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">Selected Events</span>
+          <ul id="summary-events" class="pill-list" aria-live="polite">
+            <li class="pill-empty">No events selected yet</li>
+          </ul>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">Storage Status</span>
+          <span id="summary-status" class="card-subtitle">Not yet saved</span>
+        </div>
+
+        <div class="storage-preview">
+          <h3 class="storage-preview-title">JSON Payload (<code>wedding</code>)</h3>
+          <pre id="storage-json" class="storage-code">{
+  "style": "Fusion",
+  "events": []
+}</pre>
+        </div>
+
+        <div style="margin-top: 1.15rem; display: flex; flex-wrap: wrap; gap: 0.65rem;">
+          <a class="btn btn-outline" href="pages/ceremony-guide.html">View Ceremony Guide</a>
+          <a class="btn btn-secondary" href="../Yusuf 2/index.html" id="yusuf2-link">Link to Yusuf 2 &rarr;</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Petal &amp; Promise &middot; Yusuf 1 (Wedding Customization) &middot; Illustrative data only</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Wedding Customization</a>
+        <a href="pages/ceremony-guide.html">Ceremony Guide</a>
+        <a href="../Yusuf 2/index.html">Continue to Yusuf 2</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

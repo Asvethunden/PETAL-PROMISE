@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="floral-sprig-title">
+  <title id="floral-sprig-title">Botanical corner floral sprig</title>
+  <path d="M18 102 C36 80, 62 52, 98 24" stroke="#A3AC96" stroke-width="2.4" stroke-linecap="round" fill="none" />
+  <path d="M40 78 C28 68, 28 52, 42 48 C48 60, 48 70, 40 78 Z" fill="#A3AC96" opacity="0.8" />
+  <path d="M58 60 C72 64, 82 54, 82 42 C70 44, 62 50, 58 60 Z" fill="#A3AC96" opacity="0.85" />
+  <g transform="translate(88, 30)">
+    <circle cx="0" cy="-10" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="10" cy="0" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="0" cy="10" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="-10" cy="0" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="5" fill="#D49AA8" />
+  </g>
+  <circle cx="30" cy="90" r="4" fill="#D49AA8" />
+  <circle cx="72" cy="46" r="3.5" fill="#554A45" opacity="0.7" />
+</svg>
