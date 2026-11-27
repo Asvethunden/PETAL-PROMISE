@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    ============================================================================
+    CL1000 - IICT SEMESTER PROJECT: FALL 2026
+    Student Name: Jaweria Junejo
+    Roll Number: 26i-3206
+    Section: SE-D
+    Page 3: Cultural Preferences & Custom Wedding Planner Form
+    Relative Path: pages/cultural-preferences.html
+    ============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Preferences Planner | Petal &amp; Promise - Jaweria (26i-3206)</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- External Shared Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Academic Metadata Top Bar -->
+    <aside class="academic-bar" aria-label="Academic Project Info">
+        <div class="container">
+            <div>
+                <strong>IICT Semester Project (Fall 2026)</strong> | Class: <strong>SE-D</strong>
+            </div>
+            <div>
+                Module: <strong>Cultural Preferences (Page 3 of 3)</strong>
+                <span class="student-tag">Jaweria Junejo (26i-3206)</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Site Navigation -->
+    <header class="main-nav">
+        <div class="container nav-wrapper">
+            <a href="../index.html" class="brand-logo">
+                Petal &amp; <span>Promise</span>
+            </a>
+            
+            <button class="hamburger-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html">Home</a></li>
+                <li class="nav-item"><a href="cultural-weddings.html">Cultural Weddings</a></li>
+                <li class="nav-item"><a href="wedding-traditions.html">Wedding Traditions</a></li>
+                <li class="nav-item"><a href="cultural-preferences.html" class="active">Cultural Preferences</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <p class="hero-tagline">Bespoke Wedding Customization</p>
+                <h1 class="hero-heading">Cultural <em>Preferences Studio</em></h1>
+                <p class="hero-description">
+                    Tailor your wedding heritage into an extraordinary reality. Select specific ceremonial rituals, 
+                    attire styling, cuisine menus, folk entertainment, and watch your custom package update in real time.
+                </p>
+            </div>
+        </section>
+
+        <!-- Interactive Customizer Section (Rubric: Forms, State, Logic, Interaction) -->
+        <section class="section-padding" id="cultural-preferences">
+            <div class="container">
+                
+                <div class="section-head">
+                    <span class="sub-title">Personalized Wedding Planner</span>
+                    <h2 class="main-title">Configure Your Cultural Preferences</h2>
+                    <p class="section-intro-text">
+                        All your selections are automatically saved in local memory (State &amp; Memory) and dynamically calculate your bespoke budget.
+                    </p>
+                </div>
+
+                <div class="form-blueprint-layout">
+                    
+                    <!-- Preference Customizer Form (Rubric: Forms & Input with Real-time Validation) -->
+                    <div class="customizer-card">
+                        <form id="culturalPreferencesForm" onsubmit="handlePlannerFormSubmission(event)" novalidate>
+                            
+                            <!-- Section A: Client Information with Validation -->
+                            <div class="form-field-set">
+                                <label class="field-heading" for="inputClientName">1. Couple / Family Name *</label>
+                                <span class="field-tip">Enter the primary contact or couple names</span>
+                                <input type="text" id="inputClientName" class="form-control-input" placeholder="e.g. Ayesha &amp; Bilal Junejo" required>
+                                <div id="nameError" class="input-error-msg">Please enter at least 3 characters for the name.</div>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+                                <div>
+                                    <label style="font-size: 0.9rem; font-weight: 600; color: var(--primary-burgundy);" for="inputClientEmail">Email Address *</label>
+                                    <input type="email" id="inputClientEmail" class="form-control-input" placeholder="client@example.com" required>
+                                    <div id="emailError" class="input-error-msg">Please enter a valid email address.</div>
+                                </div>
+                                <div>
+                                    <label style="font-size: 0.9rem; font-weight: 600; color: var(--primary-burgundy);" for="inputClientPhone">Phone Number *</label>
+                                    <input type="tel" id="inputClientPhone" class="form-control-input" placeholder="+92 300 1234567" required>
+                                    <div id="phoneError" class="input-error-msg">Please enter a valid phone number.</div>
+                                </div>
+                            </div>
+
+                            <!-- Section B: Primary Cultural Tradition Selection -->
+                            <div class="form-field-set">
+                                <label class="field-heading">2. Primary Cultural Tradition</label>
+                                <span class="field-tip">Select the foundational heritage theme for your celebrations</span>
+                                <div class="chips-grid">
+                                    <div class="choice-chip active" onclick="onCultureSelect('South Asian (Desi Traditional)', 'desi', 2500, this)">
+                                        South Asian (Desi)
+                                    </div>
+                                    <div class="choice-chip" onclick="onCultureSelect('Middle Eastern (Arab Zaffa)', 'middle-east', 2800, this)">
+                                        Middle Eastern
+                                    </div>
+                                    <div class="choice-chip" onclick="onCultureSelect('Western Classic (White Vows)', 'western', 2200, this)">
+                                        Western Classic
+                                    </div>
+                                    <div class="choice-chip" onclick="onCultureSelect('East Asian Heritage (Tea Ceremony)', 'east-asian', 2400, this)">
+                                        East Asian
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section C: Ceremonial Customs Checklist (Multi-Check) -->
+                            <div class="form-field-set">
+                                <label class="field-heading">3. Ceremonial Rituals to Include</label>
+                                <span class="field-tip">Select every traditional rite you require our coordinators to manage</span>
+                                <div class="multi-check-grid">
+                                    <label class="check-container">
+                                        <input type="checkbox" name="planner_rituals" value="Bridal Henna Night" checked onchange="onRitualsCheckboxChange()">
+                                        <span>Bridal Henna Night</span>
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="planner_rituals" value="Sacred Nikkah / Vows" checked onchange="onRitualsCheckboxChange()">
+                                        <span>Sacred Nikkah / Vows</span>
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="planner_rituals" value="Groom Barat Procession" checked onchange="onRitualsCheckboxChange()">
+                                        <span>Groom Barat Procession</span>
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="planner_rituals" value="Rukhsati / Farewell" checked onchange="onRitualsCheckboxChange()">
+                                        <span>Rukhsati / Farewell</span>
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="planner_rituals" value="Dholak Folk Dance Floor" onchange="onRitualsCheckboxChange()">
+                                        <span>Dholak Dance Floor</span>
+                                    </label>
+                                    <label class="check-container">
+                                        <input type="checkbox" name="planner_rituals" value="Tea & Coffee Welcome" onchange="onRitualsCheckboxChange()">
+                                        <span>Tea &amp; Coffee Welcome</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Section D: Traditional Attire Styling -->
+                            <div class="form-field-set">
+                                <label class="field-heading" for="selectAttire">4. Traditional Attire &amp; Styling</label>
+                                <span class="field-tip">Select the wardrobe aesthetic for the couple &amp; bridal party</span>
+                                <select id="selectAttire" class="form-control-select" onchange="onAttireSelect(this)">
+                                    <option selected>Royal Mughal Hand-Embroidered Lehenga &amp; Velvet Sherwani</option>
+                                    <option>Pastel Minimalist Silk Sharara &amp; Jacquard Prince Coat</option>
+                                    <option>Embroidered Arabian Kaftan &amp; Royal Gold-Trimmed Bisht</option>
+                                    <option>Classic Victorian White Gown &amp; Black Tuxedo</option>
+                                    <option>Crimson Dragon Silk Qipao / Korean Royal Hanbok</option>
+                                </select>
+                            </div>
+
+                            <!-- Section E: Cultural Catering & Dining Menu -->
+                            <div class="form-field-set">
+                                <label class="field-heading" for="selectCuisine">5. Cultural Cuisine &amp; Dining Style</label>
+                                <span class="field-tip">Choose the authentic culinary feast for your banquet</span>
+                                <select id="selectCuisine" class="form-control-select" onchange="onCuisineSelect(this)">
+                                    <option selected>Authentic Desi Royal Buffet (Dum Biryani, Qorma, Kebabs)</option>
+                                    <option>Mandi, Hummus Mezze &amp; Arabian BBQ Grills</option>
+                                    <option>3-Course Gourmet Continental Plated Dinner</option>
+                                    <option>Imperial Asian Banquet with Dim Sum Bar</option>
+                                    <option>Fusion East-Meets-West Live Interactive Stations</option>
+                                </select>
+                            </div>
+
+                            <!-- Section F: Music & Ambiance -->
+                            <div class="form-field-set">
+                                <label class="field-heading">6. Cultural Music &amp; Entertainment</label>
+                                <div class="chips-grid">
+                                    <div class="choice-chip active" onclick="onMusicSelect('Sufi Live Qawwali & Folk Dhol', this)">
+                                        Folk Dhol &amp; Qawwali
+                                    </div>
+                                    <div class="choice-chip" onclick="onMusicSelect('Arabian Dabke & Oud Ensemble', this)">
+                                        Arabian Dabke &amp; Oud
+                                    </div>
+                                    <div class="choice-chip" onclick="onMusicSelect('Classical String Quartet', this)">
+                                        String Quartet
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section G: Logistics & Guest Count (Triggers Real-time Math Logic) -->
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+                                <div>
+                                    <label style="font-size: 0.9rem; font-weight: 600; color: var(--primary-burgundy);" for="inputGuestsNumber">Expected Guests</label>
+                                    <input type="number" id="inputGuestsNumber" class="form-control-input" value="250" min="50" max="2500" oninput="onGuestsChange(this)">
+                                </div>
+                                <div>
+                                    <label style="font-size: 0.9rem; font-weight: 600; color: var(--primary-burgundy);" for="selectSeason">Wedding Season</label>
+                                    <select id="selectSeason" class="form-control-select" onchange="onSeasonSelect(this)">
+                                        <option value="winter" selected>Winter Royale (Nov - Feb)</option>
+                                        <option value="spring">Spring Blossom (Mar - Apr)</option>
+                                        <option value="autumn">Golden Autumn (Sep - Oct)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-burgundy" style="width: 100%; justify-content: center; padding: 15px; font-size: 1rem;">
+                                Submit &amp; Generate Bespoke Cultural Package ✦
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Live Dynamic Blueprint Summary Card (Rubric: State & Calculation) -->
+                    <aside class="blueprint-card" aria-label="Real-Time Selected Preferences Summary">
+                        <div class="blueprint-header">
+                            <h3>Wedding Blueprint</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Real-time Package Calculator</p>
+                        </div>
+
+                        <ul class="blueprint-meta-list">
+                            <li>
+                                <span class="label-text">Heritage:</span>
+                                <span class="val-text" id="blueprintCultureVal">South Asian (Desi)</span>
+                            </li>
+                            <li>
+                                <span class="label-text">Attire:</span>
+                                <span class="val-text" id="blueprintAttireVal">Royal Mughal Lehenga</span>
+                            </li>
+                            <li>
+                                <span class="label-text">Dining:</span>
+                                <span class="val-text" id="blueprintCuisineVal">Authentic Desi Buffet</span>
+                            </li>
+                            <li>
+                                <span class="label-text">Music:</span>
+                                <span class="val-text" id="blueprintMusicVal">Folk Dhol &amp; Qawwali</span>
+                            </li>
+                            <li>
+                                <span class="label-text">Gathering:</span>
+                                <span class="val-text" id="blueprintGuestsVal">250 Guests</span>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--primary-burgundy);">Selected Sacred Customs:</span>
+                            <div class="badges-flow" id="blueprintRitualsBadges">
+                                <!-- Populated dynamically from state -->
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Formula Calculation Banner -->
+                        <div class="price-summary-banner">
+                            <small>Dynamic Estimated Package</small>
+                            <strong id="liveBudgetEstimate">$4,480 USD</strong>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                                *Saved in browser memory across page reloads
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Dialog Window (Rubric: Interaction & Accessibility) -->
+    <div class="modal-overlay" id="bookingSuccessModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+        <div class="modal-window">
+            <div style="width: 65px; height: 65px; background: #e8f5ec; color: #164230; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; font-size: 2rem; margin-bottom: 16px;">
+                ✓
+            </div>
+            <h3 id="modalHeading" style="font-size: 1.7rem; color: var(--primary-burgundy); margin-bottom: 12px;">Custom Package Finalized!</h3>
+            <div id="modalDynamicSummary">
+                <!-- Dynamically filled on submit -->
+            </div>
+            <button type="button" class="btn btn-burgundy btn-close-modal" style="width: 100%; justify-content: center; margin-top: 15px;" onclick="closeModalDialog()">
+                Done &amp; Close Window
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: var(--primary-gold); font-family: 'Playfair Display', serif; margin-bottom: 12px;">Petal &amp; Promise</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.7;">
+                        Curating bespoke cultural weddings with sacred heritage and modern luxury.
+                    </p>
+                    <p class="ai-disclosure-notice">
+                        *Images used for educational and non-commercial project purposes via Unsplash.
+                    </p>
+                </div>
+                <div>
+                    <h4>Jaweria's Module Pages</h4>
+                    <ul>
+                        <li><a href="cultural-weddings.html">1. Cultural Weddings Overview</a></li>
+                        <li><a href="wedding-traditions.html">2. Wedding Traditions &amp; Ceremonies</a></li>
+                        <li><a href="cultural-preferences.html">3. Cultural Preferences &amp; Planner</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>IICT Student Credits</h4>
+                    <ul>
+                        <li>Course: <strong>IICT (Fall 2026)</strong></li>
+                        <li>Developer: <strong>Jaweria Junejo</strong></li>
+                        <li>Roll No: <strong>26i-3206</strong></li>
+                        <li>Section: <strong>SE-D</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Petal &amp; Promise Wedding Planners. Implemented for IICT by <strong>Jaweria Junejo (26i-3206, SE-D)</strong>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Vanilla JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>
