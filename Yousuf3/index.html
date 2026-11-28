@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petal &amp; Promise | Budget Breakdown &amp; Saved Plan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="floral-corner floral-corner--top-left" aria-hidden="true">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 140 C40 100 72 68 135 28" stroke="#A3AC96" stroke-width="2" opacity="0.45"/>
+      <ellipse cx="48" cy="102" rx="18" ry="7" transform="rotate(-38 48 102)" fill="#A3AC96" opacity="0.35"/>
+      <ellipse cx="92" cy="54" rx="16" ry="6" transform="rotate(-24 92 54)" fill="#A3AC96" opacity="0.35"/>
+      <circle cx="42" cy="48" r="20" fill="#F3D7DF" opacity="0.7"/>
+      <circle cx="40" cy="45" r="11" fill="#D49AA8" opacity="0.55"/>
+      <path d="M74 26 C81 36 81 46 74 52 C67 46 67 36 74 26 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2" opacity="0.8"/>
+      <circle cx="26" cy="82" r="12" fill="#D49AA8" opacity="0.45"/>
+    </svg>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../Yousuf1/index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+            <path d="M22 8 C26 15 26 21 22 25 C18 21 18 15 22 8 Z" fill="#FFF9F5" stroke="#554A45" stroke-width="1.1"/>
+            <ellipse cx="14" cy="26" rx="6" ry="3" transform="rotate(-30 14 26)" fill="#A3AC96"/>
+            <ellipse cx="30" cy="26" rx="6" ry="3" transform="rotate(30 30 26)" fill="#A3AC96"/>
+            <circle cx="22" cy="24" r="6.5" fill="#D49AA8"/>
+            <circle cx="21" cy="23" r="3" fill="#FFF9F5"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">Wedding Customization &amp; Budget Planning</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="sr-only">Toggle navigation menu</span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Wedding planning steps">
+        <ol class="step-nav">
+          <li>
+            <a class="step-link" href="../Yousuf1/index.html">
+              <span class="step-num">1</span>
+              <span>Customization</span>
+            </a>
+          </li>
+          <li>
+            <a class="step-link" href="../Yousuf2/index.html">
+              <span class="step-num">2</span>
+              <span>Budget Calculator</span>
+            </a>
+          </li>
+          <li>
+            <a class="step-link is-active" href="index.html" aria-current="page">
+              <span class="step-num">3</span>
+              <span>Budget Breakdown</span>
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container page-main">
+    <section class="hero-banner" aria-labelledby="page-heading">
+      <p class="eyebrow">Step 3 of 3 · Bespoke Financial Keepsake</p>
+      <h1 id="page-heading">Budget Breakdown &amp; Saved Wedding Plan</h1>
+      <p class="hero-lead">
+        Review your celebration overview, fine-tune individual category allocations in real time,
+        and save, print, or download your final Petal &amp; Promise wedding plan.
+      </p>
+      <img
+        class="hero-seal"
+        src="images/floral-seal.svg"
+        alt="Petal and Promise floral seal featuring white lilies, blush roses, and sage leaves"
+        width="190"
+        height="82"
+      >
+    </section>
+
+    <!-- Missing Data Empty State -->
+    <section id="empty-state" class="card empty-state" hidden aria-labelledby="empty-heading">
+      <h2 id="empty-heading">No Wedding Budget Plan Found Yet</h2>
+      <p>
+        Please complete your wedding customization and budget calculation first so we can assemble
+        your interactive breakdown dashboard.
+      </p>
+      <div class="empty-state-actions">
+        <a class="btn btn-primary" href="../Yousuf1/index.html">Start at Step 1: Customization</a>
+        <a class="btn btn-ghost" href="../Yousuf2/index.html">Go to Step 2: Budget Calculator</a>
+      </div>
+    </section>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard-content" hidden>
+      <!-- Status & Over-Budget Alerts -->
+      <div
+        id="over-budget-warning"
+        class="alert-banner alert-banner--danger"
+        role="alert"
+        aria-live="assertive"
+        hidden
+      ></div>
+
+      <div
+        id="save-status-banner"
+        class="alert-banner alert-banner--success"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+
+      <!-- Overview Summary Grid -->
+      <section class="card overview-card" aria-labelledby="overview-heading">
+        <div class="overview-top">
+          <div>
+            <p class="section-kicker">01 · Celebration Snapshot</p>
+            <h2 id="overview-heading" class="card-heading">Wedding &amp; Budget Summary</h2>
+          </div>
+          <span class="plan-badge" id="plan-status-badge">Draft from Calculator</span>
+        </div>
+
+        <dl class="overview-grid">
+          <div class="stat-tile">
+            <dt>Wedding Style</dt>
+            <dd id="dash-style">—</dd>
+          </div>
+          <div class="stat-tile">
+            <dt>Total Events</dt>
+            <dd id="dash-events">0</dd>
+          </div>
+          <div class="stat-tile">
+            <dt>Number of Guests</dt>
+            <dd id="dash-guests">0</dd>
+          </div>
+          <div class="stat-tile">
+            <dt>Spending Priority</dt>
+            <dd id="dash-priority">—</dd>
+          </div>
+          <div class="stat-tile stat-tile--highlight">
+            <dt>Total Wedding Budget</dt>
+            <dd id="dash-total-budget">PKR 0</dd>
+          </div>
+          <div class="stat-tile stat-tile--highlight">
+            <dt>Budget Per Guest</dt>
+            <dd id="dash-per-guest">PKR 0</dd>
+          </div>
+        </dl>
+
+        <div class="ceremonies-bar">
+          <span class="ceremonies-bar-label">Selected Ceremonies:</span>
+          <div id="dash-ceremonies" class="ceremony-pills"></div>
+        </div>
+      </section>
+
+      <!-- Visualization + Editable Breakdown -->
+      <div class="dashboard-grid">
+        <!-- Interactive SVG Donut Chart Card -->
+        <section class="card chart-card" aria-labelledby="chart-heading">
+          <p class="section-kicker">02 · Visual Distribution</p>
+          <h2 id="chart-heading" class="card-heading">Interactive Allocation Chart</h2>
+          <p class="chart-hint">
+            Hover, click, or focus any slice or legend row to inspect that category's share.
+          </p>
+
+          <div class="chart-stage">
+            <svg
+              id="budget-donut-svg"
+              class="donut-svg"
+              viewBox="0 0 260 260"
+              role="img"
+              aria-labelledby="donut-title donut-desc"
+            >
+              <title id="donut-title">Wedding Budget Allocation Donut Chart</title>
+              <desc id="donut-desc">Interactive breakdown across Catering, Venue, Decoration, Photography, and Emergency reserve.</desc>
+              <circle
+                cx="130"
+                cy="130"
+                r="88"
+                fill="none"
+                stroke="#F1E6E2"
+                stroke-width="28"
+              />
+              <g id="donut-segments"></g>
+            </svg>
+
+            <div class="donut-center" aria-live="polite">
+              <span class="donut-center-label" id="donut-center-label">Total Allocated</span>
+              <strong class="donut-center-value" id="donut-center-value">PKR 0</strong>
+              <span class="donut-center-sub" id="donut-center-sub">100% of budget</span>
+            </div>
+          </div>
+
+          <ul class="chart-legend" id="chart-legend"></ul>
+        </section>
+
+        <!-- Editable Category Allocations Card -->
+        <section class="card editor-card" aria-labelledby="editor-heading">
+          <div class="editor-header">
+            <div>
+              <p class="section-kicker">03 · Fine-Tune Allocations</p>
+              <h2 id="editor-heading" class="card-heading">Editable Category Breakdown</h2>
+            </div>
+            <button type="button" class="btn btn-ghost btn-sm" id="restore-calc-btn">
+              Match Calculator Defaults
+            </button>
+          </div>
+
+          <div id="allocation-rows" class="allocation-editor-list"></div>
+
+          <div class="totals-panel" aria-live="polite">
+            <div class="totals-row">
+              <span>Total Wedding Budget</span>
+              <strong id="totals-budget">PKR 0</strong>
+            </div>
+            <div class="totals-row">
+              <span>Total Allocated Funds</span>
+              <strong id="totals-allocated">PKR 0</strong>
+            </div>
+            <div class="totals-row totals-row--remaining" id="remaining-row">
+              <span>Remaining Budget</span>
+              <strong id="totals-remaining">PKR 0</strong>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Action Toolbar -->
+      <section class="card actions-card no-print" aria-labelledby="actions-heading">
+        <h2 id="actions-heading" class="sr-only">Plan Actions</h2>
+        <div class="actions-grid">
+          <button type="button" class="btn btn-primary" id="save-plan-btn">
+            Save Final Wedding Plan
+          </button>
+          <a class="btn btn-secondary" href="../Yousuf1/index.html" id="edit-selections-link">
+            Edit Previous Selections
+          </a>
+          <a class="btn btn-ghost" href="../Yousuf2/index.html">
+            Adjust Budget &amp; Guests
+          </a>
+          <button type="button" class="btn btn-ghost" id="print-plan-btn">
+            Print Wedding Summary
+          </button>
+          <button type="button" class="btn btn-ghost" id="download-plan-btn">
+            Download Summary (.txt)
+          </button>
+          <button type="button" class="btn btn-danger-outline" id="reset-plan-btn">
+            Reset Wedding Plan
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Accessible Confirmation Modal for Reset -->
+  <div
+    id="reset-modal"
+    class="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="reset-modal-title"
+    aria-describedby="reset-modal-desc"
+    hidden
+  >
+    <div class="modal-card">
+      <h2 id="reset-modal-title" class="card-heading">Reset Wedding Plan?</h2>
+      <p id="reset-modal-desc">
+        This will permanently clear your selected wedding style, ceremonies, budget calculation,
+        and saved plan from this browser.
+      </p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" id="cancel-reset-btn">Cancel</button>
+        <button type="button" class="btn btn-danger" id="confirm-reset-btn">Yes, Reset Plan</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Petal &amp; Promise</strong>
+        <span>FAST-NUCES AICT Final Project · Crafted by M. Yousuf (26i-3179, Section D)</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="../Yousuf1/index.html">1. Customization</a>
+        <a href="../Yousuf2/index.html">2. Budget Calculator</a>
+        <a href="index.html">3. Budget Breakdown</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

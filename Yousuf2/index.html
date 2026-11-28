@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petal &amp; Promise | Wedding Budget Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="floral-corner floral-corner--top-left" aria-hidden="true">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 140 C40 100 72 68 135 28" stroke="#A3AC96" stroke-width="2" opacity="0.45"/>
+      <ellipse cx="48" cy="102" rx="18" ry="7" transform="rotate(-38 48 102)" fill="#A3AC96" opacity="0.35"/>
+      <ellipse cx="92" cy="54" rx="16" ry="6" transform="rotate(-24 92 54)" fill="#A3AC96" opacity="0.35"/>
+      <circle cx="42" cy="48" r="20" fill="#F3D7DF" opacity="0.7"/>
+      <circle cx="40" cy="45" r="11" fill="#D49AA8" opacity="0.55"/>
+      <path d="M74 26 C81 36 81 46 74 52 C67 46 67 36 74 26 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2" opacity="0.8"/>
+      <circle cx="26" cy="82" r="12" fill="#D49AA8" opacity="0.45"/>
+    </svg>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../Yousuf1/index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+            <path d="M22 8 C26 15 26 21 22 25 C18 21 18 15 22 8 Z" fill="#FFF9F5" stroke="#554A45" stroke-width="1.1"/>
+            <ellipse cx="14" cy="26" rx="6" ry="3" transform="rotate(-30 14 26)" fill="#A3AC96"/>
+            <ellipse cx="30" cy="26" rx="6" ry="3" transform="rotate(30 30 26)" fill="#A3AC96"/>
+            <circle cx="22" cy="24" r="6.5" fill="#D49AA8"/>
+            <circle cx="21" cy="23" r="3" fill="#FFF9F5"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">Wedding Customization &amp; Budget Planning</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="sr-only">Toggle navigation menu</span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Wedding planning steps">
+        <ol class="step-nav">
+          <li>
+            <a class="step-link" href="../Yousuf1/index.html">
+              <span class="step-num">1</span>
+              <span>Customization</span>
+            </a>
+          </li>
+          <li>
+            <a class="step-link is-active" href="index.html" aria-current="page">
+              <span class="step-num">2</span>
+              <span>Budget Calculator</span>
+            </a>
+          </li>
+          <li>
+            <a class="step-link" href="../Yousuf3/index.html">
+              <span class="step-num">3</span>
+              <span>Budget Breakdown</span>
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container page-main">
+    <section class="hero-banner" aria-labelledby="page-heading">
+      <p class="eyebrow">Step 2 of 3 · Thoughtful Financial Planning</p>
+      <h1 id="page-heading">Wedding Budget Calculator</h1>
+      <p class="hero-lead">
+        Enter your overall celebration budget in PKR, expected guest count, and spending priority
+        to craft a balanced category allocation tailored to your ceremonies.
+      </p>
+      <div class="floral-divider" aria-hidden="true">
+        <svg viewBox="0 0 220 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="8" y1="18" x2="82" y2="18" stroke="#D49AA8" stroke-width="1.2"/>
+          <ellipse cx="94" cy="18" rx="9" ry="4" fill="#A3AC96"/>
+          <circle cx="110" cy="18" r="8" fill="#D49AA8"/>
+          <circle cx="110" cy="18" r="3.5" fill="#FFF9F5"/>
+          <ellipse cx="126" cy="18" rx="9" ry="4" fill="#A3AC96"/>
+          <line x1="138" y1="18" x2="212" y2="18" stroke="#D49AA8" stroke-width="1.2"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Retrieved Page 1 Summary Strip -->
+    <section class="card context-strip" aria-labelledby="selected-wedding-heading">
+      <div class="context-strip-content">
+        <div>
+          <p class="section-kicker" id="selected-wedding-heading">Selected Wedding Profile</p>
+          <div class="context-details" id="wedding-context-details">
+            <div class="context-item">
+              <span class="context-label">Wedding Style:</span>
+              <strong id="ctx-style">Not selected</strong>
+            </div>
+            <div class="context-item">
+              <span class="context-label">Total Events:</span>
+              <strong id="ctx-events">0</strong>
+            </div>
+            <div class="context-item context-item--ceremonies">
+              <span class="context-label">Ceremonies:</span>
+              <div id="ctx-ceremonies" class="ceremony-pills">
+                <span class="empty-pill">None selected yet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="context-actions">
+          <img
+            class="context-bloom"
+            src="images/budget-bloom.svg"
+            alt="Decorative rose and white lily illustration"
+            width="140"
+            height="60"
+          >
+          <a class="btn btn-ghost btn-sm" href="../Yousuf1/index.html">Edit Style &amp; Ceremonies</a>
+        </div>
+      </div>
+      <div id="missing-wedding-notice" class="notice-banner" role="status" hidden>
+        No wedding customization was found yet. You can still calculate a budget below, or
+        <a href="../Yousuf1/index.html">return to Step 1</a> to choose your wedding style and ceremonies first.
+      </div>
+    </section>
+
+    <div
+      id="form-alert"
+      class="alert-banner"
+      role="alert"
+      aria-live="assertive"
+      hidden
+    ></div>
+
+    <div class="calculator-layout">
+      <!-- Input Form Card -->
+      <section class="card form-card" aria-labelledby="inputs-heading">
+        <p class="section-kicker">01 · Celebration Parameters</p>
+        <h2 id="inputs-heading" class="card-heading">Enter Budget &amp; Guest Details</h2>
+
+        <form id="budget-form" novalidate>
+          <div class="form-group">
+            <label class="field-label" for="total-budget">
+              Total Wedding Budget (PKR) <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <div class="input-with-prefix">
+              <span class="input-prefix" aria-hidden="true">PKR</span>
+              <input
+                type="number"
+                id="total-budget"
+                name="totalBudget"
+                min="1"
+                step="1000"
+                placeholder="e.g., 1500000"
+                aria-describedby="budget-hint budget-error"
+                required
+              >
+            </div>
+            <p class="field-hint" id="budget-hint">Enter a positive amount in Pakistani Rupees (PKR).</p>
+            <p class="field-error" id="budget-error" role="alert" hidden></p>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="guest-count">
+              Number of Guests <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="number"
+              id="guest-count"
+              name="guestCount"
+              min="1"
+              step="1"
+              placeholder="e.g., 200"
+              aria-describedby="guests-hint guests-error"
+              required
+            >
+            <p class="field-hint" id="guests-hint">Enter a whole number greater than zero.</p>
+            <p class="field-error" id="guests-error" role="alert" hidden></p>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="spending-priority">
+              Spending Priority <span class="required-mark" aria-hidden="true">*</span>
+            </label>
+            <select
+              id="spending-priority"
+              name="spendingPriority"
+              aria-describedby="priority-hint"
+            >
+              <option value="Balanced">Balanced (40% Catering, 25% Venue, 15% Decor, 10% Photo, 10% Reserve)</option>
+              <option value="Catering">Catering Focus (50% Catering, 20% Venue, 12% Decor, 8% Photo, 10% Reserve)</option>
+              <option value="Venue">Venue Focus (32% Catering, 38% Venue, 12% Decor, 8% Photo, 10% Reserve)</option>
+              <option value="Decoration">Decoration Focus (34% Catering, 22% Venue, 26% Decor, 8% Photo, 10% Reserve)</option>
+              <option value="Photography">Photography Focus (35% Catering, 22% Venue, 13% Decor, 20% Photo, 10% Reserve)</option>
+            </select>
+            <p class="field-hint" id="priority-hint">
+              Percentages adjust automatically according to your chosen focus while always totaling 100%.
+            </p>
+          </div>
+
+          <div class="button-row">
+            <button type="button" class="btn btn-ghost" id="back-btn">Back</button>
+            <button type="button" class="btn btn-secondary" id="reset-btn">Reset</button>
+            <button type="submit" class="btn btn-primary" id="continue-btn">
+              Continue to Budget Breakdown
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Live Calculation Results Card -->
+      <section class="card results-card" aria-labelledby="results-heading" aria-live="polite">
+        <div class="results-header">
+          <div>
+            <p class="section-kicker">02 · Automated Allocation</p>
+            <h2 id="results-heading" class="card-heading">Live Budget Preview</h2>
+          </div>
+          <span class="priority-badge" id="active-priority-badge">Balanced</span>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-box">
+            <span class="kpi-label">Total Budget</span>
+            <strong class="kpi-value" id="out-total-budget">PKR 0</strong>
+          </div>
+          <div class="kpi-box kpi-box--accent">
+            <span class="kpi-label">Budget Per Guest</span>
+            <strong class="kpi-value" id="out-per-guest">PKR 0</strong>
+          </div>
+        </div>
+
+        <div id="results-placeholder" class="results-placeholder">
+          Enter a valid wedding budget and guest count to preview your category breakdown and progress bars.
+        </div>
+
+        <ul class="allocation-list" id="allocation-list" hidden></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Petal &amp; Promise</strong>
+        <span>FAST-NUCES AICT Final Project · Crafted by M. Yousuf (26i-3179, Section D)</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="../Yousuf1/index.html">1. Customization</a>
+        <a href="index.html">2. Budget Calculator</a>
+        <a href="../Yousuf3/index.html">3. Budget Breakdown</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

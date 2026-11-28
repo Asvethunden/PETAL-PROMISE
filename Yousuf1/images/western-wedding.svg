@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-label="Western garden ceremony pergola framed by white lilies, blush roses, and sage greenery">
+  <defs>
+    <linearGradient id="bgWest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF9F5"/>
+      <stop offset="100%" stop-color="#EAEFE5"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="220" rx="16" fill="url(#bgWest)"/>
+  <!-- Soft garden halo -->
+  <circle cx="180" cy="116" r="74" fill="#F3D7DF" opacity="0.35"/>
+  <!-- Minimalist rounded floral arch -->
+  <path d="M104 205 V106 A76 76 0 0 1 256 106 V205" fill="#FFF9F5" fill-opacity="0.78" stroke="#A3AC96" stroke-width="3"/>
+  <path d="M116 205 V108 A64 64 0 0 1 244 108 V205" fill="none" stroke="#D49AA8" stroke-width="1.4" opacity="0.75"/>
+  <!-- Draped silk swag -->
+  <path d="M104 88 Q180 124 256 88" fill="none" stroke="#F3D7DF" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+  <!-- Top floral crown on arch -->
+  <g transform="translate(180, 38)">
+    <ellipse cx="-26" cy="4" rx="16" ry="6" transform="rotate(-18 -26 4)" fill="#A3AC96"/>
+    <ellipse cx="26" cy="4" rx="16" ry="6" transform="rotate(18 26 4)" fill="#A3AC96"/>
+    <!-- White lily center -->
+    <path d="M0 -20 C7 -10 7 0 0 6 C-7 0 -7 -10 0 -20 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2"/>
+    <path d="M-18 -6 C-8 -11 0 -8 4 0 C-4 5 -12 2 -18 -6 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2"/>
+    <path d="M18 -6 C12 2 4 5 -4 0 C0 -8 8 -11 18 -6 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2"/>
+    <circle cx="-16" cy="8" r="10" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2"/>
+    <circle cx="16" cy="8" r="10" fill="#D49AA8"/>
+    <circle cx="0" cy="4" r="5" fill="#D49AA8"/>
+  </g>
+  <!-- Interlocking rings emblem inside arch -->
+  <circle cx="171" cy="144" r="15" fill="none" stroke="#554A45" stroke-width="1.8" opacity="0.75"/>
+  <circle cx="189" cy="144" r="15" fill="none" stroke="#D49AA8" stroke-width="1.8"/>
+  <!-- Side botanical stems -->
+  <g transform="translate(96, 166)">
+    <ellipse cx="-10" cy="0" rx="15" ry="6" transform="rotate(-40 -10 0)" fill="#A3AC96"/>
+    <circle cx="6" cy="4" r="14" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2"/>
+    <circle cx="6" cy="4" r="6" fill="#D49AA8"/>
+  </g>
+  <g transform="translate(264, 166)">
+    <ellipse cx="10" cy="0" rx="15" ry="6" transform="rotate(40 10 0)" fill="#A3AC96"/>
+    <circle cx="-6" cy="4" r="14" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.3"/>
+    <circle cx="-6" cy="4" r="6" fill="#F3D7DF"/>
+  </g>
+</svg>

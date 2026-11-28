@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petal &amp; Promise | Wedding Customization</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Subtle decorative floral corners -->
+  <div class="floral-corner floral-corner--top-left" aria-hidden="true">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 140 C40 100 72 68 135 28" stroke="#A3AC96" stroke-width="2" opacity="0.45"/>
+      <ellipse cx="48" cy="102" rx="18" ry="7" transform="rotate(-38 48 102)" fill="#A3AC96" opacity="0.35"/>
+      <ellipse cx="92" cy="54" rx="16" ry="6" transform="rotate(-24 92 54)" fill="#A3AC96" opacity="0.35"/>
+      <circle cx="42" cy="48" r="20" fill="#F3D7DF" opacity="0.7"/>
+      <circle cx="40" cy="45" r="11" fill="#D49AA8" opacity="0.55"/>
+      <path d="M74 26 C81 36 81 46 74 52 C67 46 67 36 74 26 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2" opacity="0.8"/>
+      <circle cx="26" cy="82" r="12" fill="#D49AA8" opacity="0.45"/>
+    </svg>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="20" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+            <path d="M22 8 C26 15 26 21 22 25 C18 21 18 15 22 8 Z" fill="#FFF9F5" stroke="#554A45" stroke-width="1.1"/>
+            <ellipse cx="14" cy="26" rx="6" ry="3" transform="rotate(-30 14 26)" fill="#A3AC96"/>
+            <ellipse cx="30" cy="26" rx="6" ry="3" transform="rotate(30 30 26)" fill="#A3AC96"/>
+            <circle cx="22" cy="24" r="6.5" fill="#D49AA8"/>
+            <circle cx="21" cy="23" r="3" fill="#FFF9F5"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">Wedding Customization &amp; Budget Planning</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="sr-only">Toggle navigation menu</span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Wedding planning steps">
+        <ol class="step-nav">
+          <li>
+            <a class="step-link is-active" href="index.html" aria-current="page">
+              <span class="step-num">1</span>
+              <span>Customization</span>
+            </a>
+          </li>
+          <li>
+            <a class="step-link" href="../Yousuf2/index.html">
+              <span class="step-num">2</span>
+              <span>Budget Calculator</span>
+            </a>
+          </li>
+          <li>
+            <a class="step-link" href="../Yousuf3/index.html">
+              <span class="step-num">3</span>
+              <span>Budget Breakdown</span>
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container page-main">
+    <section class="hero-banner" aria-labelledby="page-heading">
+      <div class="hero-copy">
+        <p class="eyebrow">Step 1 of 3 · Bespoke Celebration Design</p>
+        <h1 id="page-heading">Curate Your Wedding Style &amp; Ceremonies</h1>
+        <p class="hero-lead">
+          Begin your Petal &amp; Promise journey by choosing the aesthetic that speaks to your story
+          and selecting every cherished ceremony you wish to celebrate.
+        </p>
+      </div>
+      <div class="floral-divider" aria-hidden="true">
+        <svg viewBox="0 0 220 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="8" y1="18" x2="82" y2="18" stroke="#D49AA8" stroke-width="1.2"/>
+          <ellipse cx="94" cy="18" rx="9" ry="4" fill="#A3AC96"/>
+          <circle cx="110" cy="18" r="8" fill="#D49AA8"/>
+          <circle cx="110" cy="18" r="3.5" fill="#FFF9F5"/>
+          <ellipse cx="126" cy="18" rx="9" ry="4" fill="#A3AC96"/>
+          <line x1="138" y1="18" x2="212" y2="18" stroke="#D49AA8" stroke-width="1.2"/>
+        </svg>
+      </div>
+    </section>
+
+    <div
+      id="validation-banner"
+      class="alert-banner"
+      role="alert"
+      aria-live="assertive"
+      hidden
+    ></div>
+
+    <form id="customization-form" class="customization-layout" novalidate>
+      <div class="customization-main">
+        <!-- Section 1: Wedding Style -->
+        <fieldset class="card section-card" id="style-fieldset">
+          <legend class="section-legend">
+            <span class="section-kicker">01 · Aesthetic Direction</span>
+            <span class="section-title">Select Your Wedding Style</span>
+          </legend>
+          <p class="section-desc">
+            Choose one signature celebration style. Your selection sets the mood for your event
+            planning and budget profile.
+          </p>
+
+          <div class="style-grid" role="radiogroup" aria-label="Wedding style">
+            <label class="style-card" for="style-eastern">
+              <input
+                class="sr-only style-radio"
+                type="radio"
+                name="weddingStyle"
+                id="style-eastern"
+                value="Eastern"
+              >
+              <span class="style-card-media">
+                <img
+                  src="images/eastern-wedding.svg"
+                  alt="Eastern wedding scalloped arch decorated with blush roses, lilies, and a hanging lantern"
+                  width="360"
+                  height="220"
+                >
+                <span class="selected-badge" aria-hidden="true">Selected</span>
+              </span>
+              <span class="style-card-body">
+                <span class="style-card-header">
+                  <span class="style-name">Eastern</span>
+                  <span class="style-tag">Heritage &amp; Grandeur</span>
+                </span>
+                <span class="style-summary">
+                  Rich cultural rituals, ornate scalloped florals, warm candlelight, and traditional
+                  hospitality across multi-day festivities.
+                </span>
+              </span>
+            </label>
+
+            <label class="style-card" for="style-western">
+              <input
+                class="sr-only style-radio"
+                type="radio"
+                name="weddingStyle"
+                id="style-western"
+                value="Western"
+              >
+              <span class="style-card-media">
+                <img
+                  src="images/western-wedding.svg"
+                  alt="Western garden wedding arch draped in silk with white lilies, blush roses, and sage leaves"
+                  width="360"
+                  height="220"
+                >
+                <span class="selected-badge" aria-hidden="true">Selected</span>
+              </span>
+              <span class="style-card-body">
+                <span class="style-card-header">
+                  <span class="style-name">Western</span>
+                  <span class="style-tag">Garden Romance</span>
+                </span>
+                <span class="style-summary">
+                  Timeless pastel bouquets of white lilies and blush roses, soft botanical arches,
+                  and an intimate, refined reception atmosphere.
+                </span>
+              </span>
+            </label>
+
+            <label class="style-card" for="style-fusion">
+              <input
+                class="sr-only style-radio"
+                name="weddingStyle"
+                id="style-fusion"
+                value="Fusion"
+              >
+              <span class="style-card-media">
+                <img
+                  src="images/fusion-wedding.svg"
+                  alt="Fusion wedding emblem combining geometric motifs with roses, white lilies, and sage foliage"
+                  width="360"
+                  height="220"
+                >
+                <span class="selected-badge" aria-hidden="true">Selected</span>
+              </span>
+              <span class="style-card-body">
+                <span class="style-card-header">
+                  <span class="style-name">Fusion</span>
+                  <span class="style-tag">Modern Harmony</span>
+                </span>
+                <span class="style-summary">
+                  A seamless blend of soulful heritage ceremonies and contemporary botanical styling,
+                  tailored for modern couples.
+                </span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Section 2: Wedding Ceremonies -->
+        <fieldset class="card section-card" id="ceremonies-fieldset">
+          <legend class="section-legend">
+            <span class="section-kicker">02 · Event Lineup</span>
+            <span class="section-title">Choose Your Wedding Ceremonies</span>
+          </legend>
+          <p class="section-desc">
+            Select one or more events to include in your wedding itinerary. Each ceremony updates
+            your live celebration counter.
+          </p>
+
+          <div class="ceremony-grid">
+            <label class="ceremony-card" for="ceremony-nikkah">
+              <input
+                class="ceremony-checkbox"
+                type="checkbox"
+                name="ceremonies"
+                id="ceremony-nikkah"
+                value="Nikkah"
+              >
+              <span class="ceremony-check-ui" aria-hidden="true"></span>
+              <span class="ceremony-info">
+                <span class="ceremony-title">Nikkah</span>
+                <span class="ceremony-desc">Sacred daytime vows with serene ivory florals and intimate family seating.</span>
+              </span>
+            </label>
+
+            <label class="ceremony-card" for="ceremony-mehndi">
+              <input
+                class="ceremony-checkbox"
+                type="checkbox"
+                name="ceremonies"
+                id="ceremony-mehndi"
+                value="Mehndi"
+              >
+              <span class="ceremony-check-ui" aria-hidden="true"></span>
+              <span class="ceremony-info">
+                <span class="ceremony-title">Mehndi</span>
+                <span class="ceremony-desc">Vibrant evening of henna, folk music, floral garlands, and joyful dance.</span>
+              </span>
+            </label>
+
+            <label class="ceremony-card" for="ceremony-baraat">
+              <input
+                class="ceremony-checkbox"
+                type="checkbox"
+                name="ceremonies"
+                id="ceremony-baraat"
+                value="Baraat"
+              >
+              <span class="ceremony-check-ui" aria-hidden="true"></span>
+              <span class="ceremony-info">
+                <span class="ceremony-title">Baraat</span>
+                <span class="ceremony-desc">Grand ceremonial procession, regal stage decor, and celebratory feast.</span>
+              </span>
+            </label>
+
+            <label class="ceremony-card" for="ceremony-walima">
+              <input
+                class="ceremony-checkbox"
+                type="checkbox"
+                name="ceremonies"
+                id="ceremony-walima"
+                value="Walima"
+              >
+              <span class="ceremony-check-ui" aria-hidden="true"></span>
+              <span class="ceremony-info">
+                <span class="ceremony-title">Walima</span>
+                <span class="ceremony-desc">Graceful host banquet featuring pastel centerpieces and warm hospitality.</span>
+              </span>
+            </label>
+
+            <label class="ceremony-card" for="ceremony-reception">
+              <input
+                class="ceremony-checkbox"
+                type="checkbox"
+                name="ceremonies"
+                id="ceremony-reception"
+                value="Reception"
+              >
+              <span class="ceremony-check-ui" aria-hidden="true"></span>
+              <span class="ceremony-info">
+                <span class="ceremony-title">Reception</span>
+                <span class="ceremony-desc">Contemporary evening celebration with candlelit dining, speeches, and floral arches.</span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Sticky Dynamic Summary Sidebar -->
+      <aside class="summary-sidebar" aria-labelledby="summary-heading">
+        <div class="card summary-card">
+          <div class="summary-crest" aria-hidden="true">
+            <svg viewBox="0 0 64 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="18" cy="20" rx="10" ry="4" transform="rotate(-20 18 20)" fill="#A3AC96"/>
+              <ellipse cx="46" cy="20" rx="10" ry="4" transform="rotate(20 46 20)" fill="#A3AC96"/>
+              <path d="M32 4 C36 12 36 18 32 22 C28 18 28 12 32 4 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2"/>
+              <circle cx="32" cy="20" r="8" fill="#D49AA8"/>
+              <circle cx="32" cy="19" r="4" fill="#F3D7DF"/>
+            </svg>
+          </div>
+
+          <h2 id="summary-heading" class="summary-heading">Your Wedding Preview</h2>
+          <p class="summary-caption">Live summary saved automatically to your browser.</p>
+
+          <dl class="summary-list" aria-live="polite">
+            <div class="summary-row">
+              <dt>Wedding Style</dt>
+              <dd id="summary-style" class="summary-value is-placeholder">Not selected yet</dd>
+            </div>
+            <div class="summary-row">
+              <dt>Total Number of Events</dt>
+              <dd id="summary-count" class="summary-count">0</dd>
+            </div>
+            <div class="summary-row summary-row--stack">
+              <dt>Selected Ceremonies</dt>
+              <dd id="summary-ceremonies" class="ceremony-pills">
+                <span class="empty-pill">No ceremonies selected yet</span>
+              </dd>
+            </div>
+          </dl>
+
+          <div class="summary-actions">
+            <button type="submit" class="btn btn-primary btn-block" id="continue-btn">
+              Continue to Budget Planning
+            </button>
+            <button type="button" class="btn btn-ghost btn-block" id="clear-selection-btn">
+              Clear Selections
+            </button>
+          </div>
+        </div>
+      </aside>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Petal &amp; Promise</strong>
+        <span>FAST-NUCES AICT Final Project · Crafted by M. Yousuf (26i-3179, Section D)</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">1. Customization</a>
+        <a href="../Yousuf2/index.html">2. Budget Calculator</a>
+        <a href="../Yousuf3/index.html">3. Budget Breakdown</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
