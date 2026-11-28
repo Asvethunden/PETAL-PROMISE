@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Breakdown | Petal &amp; Promise (Yusuf 2)</title>
+  <meta name="description" content="Illustrative priority-weighted allocation preview from your saved PKR wedding budget.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="breakdown">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-link" href="../index.html">
+        <span class="brand-mark">
+          <img src="../images/floral-sprig.svg" alt="Petal and Promise floral monogram" width="30" height="30">
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">Yusuf 2 &middot; Budget Breakdown</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="../../Yusuf 1/index.html">&larr; Yusuf 1: Customization</a>
+        <a class="nav-link" href="../index.html">Budget Calculator</a>
+        <a class="nav-link" href="budget-breakdown.html" aria-current="page">Budget Breakdown</a>
+        <a class="nav-link nav-link-next" href="../../Yusuf 3/index.html">Next: Yusuf 3 &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-main">
+    <section class="hero-card" aria-labelledby="breakdown-heading">
+      <div>
+        <span class="hero-badge">Illustrative Allocation &middot; Saved Budget View</span>
+        <h1 id="breakdown-heading" class="hero-title">Priority Budget Breakdown</h1>
+        <p class="hero-description">
+          Review your saved PKR total, exact budget divided by guests, and an illustrative weighting aligned with your top priority.
+        </p>
+      </div>
+      <div class="hero-illustration">
+        <img src="../images/floral-crest.svg" alt="Petal and Promise floral wreath crest" width="240" height="160">
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="saved-budget-title">
+      <div class="card-header">
+        <h2 id="saved-budget-title" class="card-title">Saved Budget Overview</h2>
+        <p class="card-subtitle">Loaded directly from <code>localStorage["budget"]</code>.</p>
+      </div>
+
+      <div id="breakdown-empty-notice" class="feedback-banner feedback-error" hidden>
+        No saved budget was found yet. Return to <a href="../index.html">Budget Calculator</a> to enter a PKR budget, guest count, and priority.
+      </div>
+
+      <div class="metric-highlight">
+        <span class="metric-label">Budget Divided by Guests (PKR / Guest)</span>
+        <div id="breakdown-per-guest" class="metric-value">--</div>
+        <p id="breakdown-formula" class="metric-formula">Save a valid budget first to inspect per-guest allocation.</p>
+      </div>
+
+      <div class="summary-row">
+        <span class="summary-label">Saved Priority</span>
+        <span id="breakdown-priority" class="summary-value">Not saved yet</span>
+      </div>
+
+      <div class="allocation-list" id="allocation-list">
+        <article class="allocation-card" data-category="Catering">
+          <div class="allocation-head">
+            <h3>Catering</h3>
+            <span class="allocation-amount" data-amount>--</span>
+          </div>
+          <div class="allocation-bar"><div class="allocation-fill" data-bar style="width: 0%"></div></div>
+          <p class="card-subtitle" data-share>Illustrative share: --</p>
+        </article>
+
+        <article class="allocation-card" data-category="Venue">
+          <div class="allocation-head">
+            <h3>Venue</h3>
+            <span class="allocation-amount" data-amount>--</span>
+          </div>
+          <div class="allocation-bar"><div class="allocation-fill" data-bar style="width: 0%"></div></div>
+          <p class="card-subtitle" data-share>Illustrative share: --</p>
+        </article>
+
+        <article class="allocation-card" data-category="Decor">
+          <div class="allocation-head">
+            <h3>Decor</h3>
+            <span class="allocation-amount" data-amount>--</span>
+          </div>
+          <div class="allocation-bar"><div class="allocation-fill" data-bar style="width: 0%"></div></div>
+          <p class="card-subtitle" data-share>Illustrative share: --</p>
+        </article>
+      </div>
+
+      <div class="form-actions" style="margin-top: 1.5rem;">
+        <a class="btn btn-outline" href="../index.html">&larr; Back to Budget Calculator</a>
+        <a class="btn btn-secondary" href="../../Yusuf 3/index.html">Continue to Yusuf 3 &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Petal &amp; Promise &middot; Yusuf 2 (Budget Breakdown) &middot; Illustrative data only</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../../Yusuf 1/index.html">Yusuf 1: Customization</a>
+        <a href="../index.html">Budget Calculator</a>
+        <a href="budget-breakdown.html">Budget Breakdown</a>
+        <a href="../../Yusuf 3/index.html">Continue to Yusuf 3</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

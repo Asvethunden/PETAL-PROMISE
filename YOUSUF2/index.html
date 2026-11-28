@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Calculator | Petal &amp; Promise (Yusuf 2)</title>
+  <meta name="description" content="Calculate your wedding budget per guest in PKR and save your top spending priority.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="calculator">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-link" href="index.html">
+        <span class="brand-mark">
+          <img src="images/floral-sprig.svg" alt="Petal and Promise floral monogram" width="30" height="30">
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">Yusuf 2 &middot; Budget Calculator</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="../Yusuf 1/index.html">&larr; Yusuf 1: Customization</a>
+        <a class="nav-link" href="index.html" aria-current="page">Budget Calculator</a>
+        <a class="nav-link" href="pages/budget-breakdown.html">Budget Breakdown</a>
+        <a class="nav-link nav-link-next" href="../Yusuf 3/index.html">Next: Yusuf 3 &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-main">
+    <section class="hero-card" aria-labelledby="page-heading">
+      <div>
+        <span class="hero-badge">Step 2 of Planning &middot; Illustrative PKR Planner</span>
+        <h1 id="page-heading" class="hero-title">Wedding Budget Calculator</h1>
+        <p class="hero-description">
+          Enter your total PKR budget, expected guest count, and primary spending focus.
+          We calculate your exact <strong>budget per guest</strong> (<code>budget &divide; guests</code>) and store your plan under the shared <code>budget</code> key.
+        </p>
+      </div>
+      <div class="hero-illustration">
+        <img src="images/floral-crest.svg" alt="Petal and Promise floral wreath crest in blush, rose, and sage" width="240" height="160">
+      </div>
+    </section>
+
+    <div class="section-divider">
+      <img src="images/floral-divider.svg" alt="Decorative floral section divider" width="320" height="36">
+    </div>
+
+    <div class="planner-grid">
+      <section class="card" aria-labelledby="form-card-title">
+        <div class="card-header">
+          <h2 id="form-card-title" class="card-title">Budget &amp; Guest Inputs</h2>
+          <p class="card-subtitle">All figures are illustrative. Enter a positive finite PKR amount and a positive whole number of guests.</p>
+        </div>
+
+        <div id="form-feedback" class="feedback-banner" role="status" aria-live="polite" hidden></div>
+
+        <form id="budget-calculator-form" novalidate>
+          <!-- PKR Budget -->
+          <div id="budget-group" class="field-group">
+            <label class="field-label" for="budget-input">1. Total Wedding Budget (PKR)</label>
+            <p id="budget-help" class="field-help">Must be a positive finite amount in Pakistani Rupees (PKR).</p>
+            <div class="input-row">
+              <span class="input-prefix" aria-hidden="true">PKR</span>
+              <input
+                class="text-input"
+                type="number"
+                id="budget-input"
+                name="budget"
+                min="1"
+                step="any"
+                inputmode="decimal"
+                placeholder="e.g. 2500000"
+                aria-describedby="budget-help"
+              >
+            </div>
+            <div class="preset-row" aria-label="Illustrative PKR budget presets">
+              <button type="button" class="btn-chip budget-preset" data-budget="1500000">Sample: 1,500,000</button>
+              <button type="button" class="btn-chip budget-preset" data-budget="2500000">Sample: 2,500,000</button>
+              <button type="button" class="btn-chip budget-preset" data-budget="4000000">Sample: 4,000,000</button>
+            </div>
+            <div id="budget-error" class="field-error" role="alert" hidden></div>
+          </div>
+
+          <!-- Guest Count -->
+          <div id="guests-group" class="field-group">
+            <label class="field-label" for="guests-input">2. Expected Number of Guests</label>
+            <p id="guests-help" class="field-help">Must be a positive whole number (integer greater than 0).</p>
+            <input
+              class="text-input"
+              type="number"
+              id="guests-input"
+              name="guests"
+              min="1"
+              step="1"
+              inputmode="numeric"
+              placeholder="e.g. 200"
+              aria-describedby="guests-help"
+            >
+            <div class="preset-row" aria-label="Illustrative guest count presets">
+              <button type="button" class="btn-chip guests-preset" data-guests="100">Sample: 100 guests</button>
+              <button type="button" class="btn-chip guests-preset" data-guests="200">Sample: 200 guests</button>
+              <button type="button" class="btn-chip guests-preset" data-guests="350">Sample: 350 guests</button>
+            </div>
+            <div id="guests-error" class="field-error" role="alert" hidden></div>
+          </div>
+
+          <!-- Priority Selector -->
+          <fieldset id="priority-fieldset" class="planner-fieldset" aria-describedby="priority-help">
+            <legend id="priority-legend" class="fieldset-legend">3. Top Budget Priority</legend>
+            <p id="priority-help" class="fieldset-help">
+              Choose the category you want to prioritize first when planning allocations.
+            </p>
+
+            <div class="priority-options" role="radiogroup" aria-labelledby="priority-legend">
+              <label class="choice-card" for="priority-catering">
+                <input
+                  class="choice-input"
+                  type="radio"
+                  id="priority-catering"
+                  name="priority"
+                  value="Catering"
+                  aria-describedby="desc-catering"
+                  checked
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Catering</span>
+                  <span id="desc-catering" class="choice-desc">Multi-course menus, live stations, desserts, and beverage service.</span>
+                </span>
+              </label>
+
+              <label class="choice-card" for="priority-venue">
+                <input
+                  class="choice-input"
+                  type="radio"
+                  id="priority-venue"
+                  name="priority"
+                  value="Venue"
+                  aria-describedby="desc-venue"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Venue</span>
+                  <span id="desc-venue" class="choice-desc">Marquee, banquet hall, or garden estate booking and staging.</span>
+                </span>
+              </label>
+
+              <label class="choice-card" for="priority-decor">
+                <input
+                  class="choice-input"
+                  type="radio"
+                  id="priority-decor"
+                  name="priority"
+                  value="Decor"
+                  aria-describedby="desc-decor"
+                >
+                <span class="choice-content">
+                  <span class="choice-title">Decor</span>
+                  <span id="desc-decor" class="choice-desc">Fresh florals, stage design, lighting ambiance, and table styling.</span>
+                </span>
+              </label>
+            </div>
+
+            <div id="priority-error" class="field-error" role="alert" hidden></div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="save-btn">Calculate &amp; Save Budget</button>
+            <button type="button" class="btn btn-secondary" id="save-continue-btn">Save &amp; Go to Yusuf 3 &rarr;</button>
+            <button type="button" class="btn btn-outline" id="reset-btn">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Live Summary -->
+      <aside class="card summary-card" aria-labelledby="summary-heading">
+        <img
+          class="summary-sprig"
+          src="images/floral-sprig.svg"
+          alt="Decorative botanical sprig"
+          width="56"
+          height="56"
+        >
+        <div class="card-header">
+          <h2 id="summary-heading" class="card-title">Per-Guest Budget Summary</h2>
+          <p class="card-subtitle">Synced with <code>localStorage["budget"]</code>.</p>
+        </div>
+
+        <div class="metric-highlight" aria-live="polite">
+          <span class="metric-label">Budget Divided by Guests (PKR / Guest)</span>
+          <div id="per-guest-value" class="metric-value">--</div>
+          <p id="per-guest-formula" class="metric-formula">Enter a valid PKR budget and guest count to calculate.</p>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">Total PKR Budget</span>
+          <span id="summary-budget" class="summary-value">Not entered</span>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">Guest Count</span>
+          <span id="summary-guests" class="summary-value">Not entered</span>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">Selected Priority</span>
+          <span id="summary-priority" class="summary-value">Catering</span>
+        </div>
+
+        <div class="summary-row" id="wedding-context-row" hidden>
+          <span class="summary-label">From Yusuf 1 (Read-Only Context)</span>
+          <span id="wedding-context" class="context-badge"></span>
+        </div>
+
+        <div class="summary-row">
+          <span class="summary-label">Storage Status</span>
+          <span id="summary-status" class="card-subtitle">Not yet saved</span>
+        </div>
+
+        <div class="storage-preview">
+          <h3 class="storage-preview-title">JSON Payload (<code>budget</code>)</h3>
+          <pre id="storage-json" class="storage-code">{
+  "budget": null,
+  "guests": null,
+  "priority": "Catering"
+}</pre>
+        </div>
+
+        <div style="margin-top: 1.15rem; display: flex; flex-wrap: wrap; gap: 0.65rem;">
+          <a class="btn btn-outline" href="pages/budget-breakdown.html">View Budget Breakdown</a>
+          <a class="btn btn-secondary" href="../Yusuf 3/index.html" id="yusuf3-link">Link to Yusuf 3 &rarr;</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Petal &amp; Promise &middot; Yusuf 2 (Budget Calculator) &middot; Illustrative data only</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../Yusuf 1/index.html">Yusuf 1: Customization</a>
+        <a href="index.html">Budget Calculator</a>
+        <a href="pages/budget-breakdown.html">Budget Breakdown</a>
+        <a href="../Yusuf 3/index.html">Continue to Yusuf 3</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

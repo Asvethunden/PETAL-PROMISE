@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160" role="img" aria-labelledby="y2-crest-title">
+  <title id="y2-crest-title">Petal and Promise floral wreath crest</title>
+  <rect width="240" height="160" fill="none" />
+  <!-- Sage botanical ring -->
+  <path d="M74 116 C54 90, 62 50, 96 36" stroke="#A3AC96" stroke-width="2.4" stroke-linecap="round" fill="none" />
+  <path d="M166 116 C186 90, 178 50, 144 36" stroke="#A3AC96" stroke-width="2.4" stroke-linecap="round" fill="none" />
+  <path d="M84 124 C106 136, 134 136, 156 124" stroke="#D49AA8" stroke-width="2" stroke-linecap="round" fill="none" />
+
+  <!-- Leaves along wreath -->
+  <path d="M62 86 C48 80, 44 68, 54 62 C64 68, 66 78, 62 86 Z" fill="#A3AC96" opacity="0.85" />
+  <path d="M178 86 C192 80, 196 68, 186 62 C176 68, 174 78, 178 86 Z" fill="#A3AC96" opacity="0.85" />
+  <path d="M74 58 C64 46, 68 34, 80 34 C84 44, 82 52, 74 58 Z" fill="#A3AC96" opacity="0.72" />
+  <path d="M166 58 C176 46, 172 34, 160 34 C156 44, 158 52, 166 58 Z" fill="#A3AC96" opacity="0.72" />
+
+  <!-- Blush & rose blossoms -->
+  <g transform="translate(120, 42)">
+    <circle cx="0" cy="-14" r="11" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.3" />
+    <circle cx="13" cy="-4" r="11" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.3" />
+    <circle cx="8" cy="11" r="11" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.3" />
+    <circle cx="-8" cy="11" r="11" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.3" />
+    <circle cx="-13" cy="-4" r="11" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.3" />
+    <circle cx="0" cy="0" r="7" fill="#D49AA8" />
+    <circle cx="0" cy="0" r="3" fill="#554A45" />
+  </g>
+
+  <g transform="translate(74, 114)">
+    <circle cx="0" cy="-9" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="9" cy="0" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="0" cy="9" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="-9" cy="0" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="4.5" fill="#D49AA8" />
+  </g>
+
+  <g transform="translate(166, 114)">
+    <circle cx="0" cy="-9" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="9" cy="0" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="0" cy="9" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="-9" cy="0" r="8" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="4.5" fill="#D49AA8" />
+  </g>
+
+  <!-- Subtle mocha center emblem -->
+  <circle cx="120" cy="90" r="14" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.4" />
+  <path d="M120 82 L120 98 M113 87 L127 87 M114 93 L126 93" stroke="#554A45" stroke-width="1.6" stroke-linecap="round" />
+</svg>
