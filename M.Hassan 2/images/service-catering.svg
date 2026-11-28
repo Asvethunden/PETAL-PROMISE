@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img" aria-labelledby="cateringTitle">
+  <title id="cateringTitle">Botanical wedding catering service illustration</title>
+  <rect width="320" height="180" rx="12" fill="#FFF9F5"/>
+  <rect x="0" y="132" width="320" height="48" fill="#F3D7DF" opacity="0.45"/>
+  <line x1="56" y1="132" x2="264" y2="132" stroke="#554A45" stroke-width="3" stroke-linecap="round"/>
+  <path d="M88 132 A72 64 0 0 1 232 132 Z" fill="#F3D7DF" stroke="#D49AA8" stroke-width="2.5"/>
+  <circle cx="160" cy="60" r="8" fill="#D49AA8" stroke="#554A45" stroke-width="2"/>
+  <path d="M112 132 C98 118, 80 116, 72 124 C84 130, 98 134, 112 132 Z" fill="#A3AC96"/>
+  <path d="M208 132 C222 118, 240 116, 248 124 C236 130, 222 134, 208 132 Z" fill="#A3AC96"/>
+  <circle cx="160" cy="100" r="14" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.5"/>
+  <circle cx="160" cy="100" r="6" fill="#D49AA8"/>
+</svg>

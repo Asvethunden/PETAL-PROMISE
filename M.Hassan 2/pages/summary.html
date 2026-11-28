@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Plan Summary — Petal &amp; Promise (M.Hassan 2)</title>
+  <meta name="description" content="Review your saved wedding services and planning notes stored in same-origin localStorage.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="summary">
+  <a class="skip-link" href="#main-content">Skip to Service Summary</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html">
+        <img class="brand-logo" src="../images/floral-crest.svg" alt="Petal and Promise floral emblem" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">M.Hassan 2 &middot; Service Summary</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Wedding Planner Navigation">
+        <a class="nav-link" href="../../index.html">Planner Home</a>
+        <a class="nav-link" href="../../M.Hassan%201/index.html">M.Hassan 1: Venues</a>
+        <a class="nav-link" href="../index.html">Wedding Services</a>
+        <a class="nav-link" href="summary.html" aria-current="page">Service Summary</a>
+        <a class="nav-link nav-link--next" href="../../M.Hassan%203/index.html">Next: M.Hassan 3 &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="summary-page-heading">
+    <div class="container">
+      <p class="eyebrow">M.Hassan 2 Subpage &middot; Saved JSON State</p>
+      <h1 id="summary-page-heading">Your Saved Services Plan</h1>
+      <p class="hero-lead">
+        This companion page reads your saved form fields and <code>selected</code> services array from <code>localStorage["services"]</code> on the same HTTP origin, without altering sibling modules.
+      </p>
+    </div>
+  </section>
+
+  <main id="main-content" class="container subpage-main">
+    <section class="panel" aria-labelledby="saved-services-heading">
+      <h2 id="saved-services-heading">Saved Services Snapshot</h2>
+      <div id="services-summary-details" aria-live="polite"></div>
+
+      <div class="btn-row" style="margin-top: 1.4rem;">
+        <a class="btn btn-secondary" href="../index.html">&larr; Edit Wedding Services</a>
+        <a class="btn btn-primary" href="../../M.Hassan%203/index.html">Proceed to M.Hassan 3 &rarr;</a>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top: 1.5rem;" aria-labelledby="sibling-context-heading">
+      <h2 id="sibling-context-heading">Read-Only Sibling Planner Context</h2>
+      <p class="panel-note">
+        Displayed read-only from existing shared keys (<code>wedding</code> and <code>petalPromise_mHassan1_venues</code>) if already saved on this origin.
+      </p>
+      <div id="sibling-context-details"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Petal &amp; Promise &middot; M.Hassan 2 Subpage &middot; Illustrative data only.</p>
+      <div class="footer-links">
+        <a href="../../M.Hassan%201/index.html">M.Hassan 1 (Venues)</a>
+        <a href="../index.html">Wedding Services</a>
+        <a href="../../M.Hassan%203/index.html">M.Hassan 3</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

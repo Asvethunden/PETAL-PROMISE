@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img" aria-labelledby="photoTitle">
+  <title id="photoTitle">Wedding photography camera and floral vignette illustration</title>
+  <rect width="320" height="180" rx="12" fill="#FFF9F5"/>
+  <circle cx="80" cy="128" r="24" fill="#F3D7DF" opacity="0.6"/>
+  <circle cx="242" cy="56" r="20" fill="#A3AC96" opacity="0.35"/>
+  <rect x="86" y="54" width="148" height="84" rx="14" fill="#F3D7DF" stroke="#554A45" stroke-width="2.5"/>
+  <path d="M126 54 L138 38 L182 38 L194 54 Z" fill="#D49AA8" stroke="#554A45" stroke-width="2.2"/>
+  <circle cx="160" cy="96" r="28" fill="#FFF9F5" stroke="#554A45" stroke-width="2.5"/>
+  <circle cx="160" cy="96" r="16" fill="#D49AA8" opacity="0.85"/>
+  <circle cx="160" cy="96" r="6" fill="#FFF9F5"/>
+  <circle cx="212" cy="72" r="5" fill="#A3AC96"/>
+  <path d="M72 72 C64 56, 78 44, 92 50 C88 64, 80 72, 72 72 Z" fill="#A3AC96"/>
+  <path d="M248 128 C258 112, 246 98, 232 104 C236 118, 242 126, 248 128 Z" fill="#A3AC96"/>
+</svg>

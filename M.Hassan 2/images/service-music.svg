@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img" aria-labelledby="musicTitle">
+  <title id="musicTitle">Wedding music notes and floral wreath illustration</title>
+  <rect width="320" height="180" rx="12" fill="#FFF9F5"/>
+  <circle cx="160" cy="90" r="56" fill="#F3D7DF" opacity="0.45" stroke="#D49AA8" stroke-width="2" stroke-dasharray="5 4"/>
+  <ellipse cx="136" cy="116" rx="14" ry="10" transform="rotate(-18 136 116)" fill="#554A45"/>
+  <ellipse cx="186" cy="108" rx="14" ry="10" transform="rotate(-18 186 108)" fill="#554A45"/>
+  <path d="M148 114 L148 56 L198 48 L198 106" fill="none" stroke="#554A45" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="148" y1="68" x2="198" y2="60" stroke="#D49AA8" stroke-width="3"/>
+  <circle cx="102" cy="64" r="9" fill="#D49AA8"/>
+  <path d="M90 78 C78 68, 78 54, 86 50 C94 56, 98 68, 90 78 Z" fill="#A3AC96"/>
+  <circle cx="222" cy="120" r="9" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+  <path d="M234 106 C244 114, 246 128, 238 132 C230 126, 226 114, 234 106 Z" fill="#A3AC96"/>
+</svg>

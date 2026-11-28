@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="floralCrestTitle">
+  <title id="floralCrestTitle">Petal and Promise floral emblem</title>
+  <rect width="120" height="120" rx="60" fill="#FFF9F5" stroke="#D49AA8" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#F3D7DF" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M60 66 C42 66, 26 52, 24 38 C38 38, 54 48, 60 66 Z" fill="#A3AC96" opacity="0.88"/>
+  <path d="M60 66 C78 66, 94 52, 96 38 C82 38, 66 48, 60 66 Z" fill="#A3AC96" opacity="0.88"/>
+  <path d="M60 72 C45 78, 34 88, 30 96 C44 96, 55 86, 60 72 Z" fill="#A3AC96" opacity="0.72"/>
+  <path d="M60 72 C75 78, 86 88, 90 96 C76 96, 65 86, 60 72 Z" fill="#A3AC96" opacity="0.72"/>
+  <ellipse cx="60" cy="38" rx="14" ry="20" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+  <ellipse cx="42" cy="54" rx="18" ry="13" transform="rotate(-24 42 54)" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+  <ellipse cx="78" cy="54" rx="18" ry="13" transform="rotate(24 78 54)" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+  <ellipse cx="48" cy="70" rx="16" ry="12" transform="rotate(-48 48 70)" fill="#D49AA8" opacity="0.75"/>
+  <ellipse cx="72" cy="70" rx="16" ry="12" transform="rotate(48 72 70)" fill="#D49AA8" opacity="0.75"/>
+  <circle cx="60" cy="56" r="11" fill="#D49AA8"/>
+  <circle cx="60" cy="56" r="5" fill="#FFF9F5"/>
+  <path d="M60 78 L60 100" stroke="#554A45" stroke-width="2" stroke-linecap="round"/>
+</svg>

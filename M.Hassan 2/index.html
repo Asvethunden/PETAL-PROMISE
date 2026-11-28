@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Services — Petal &amp; Promise (M.Hassan 2)</title>
+  <meta name="description" content="Select Catering, Photography, Decoration, Makeup, and Music wedding services and save your service plan in the Petal &amp; Promise wedding planner.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="services">
+  <a class="skip-link" href="#main-content">Skip to Wedding Services</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="images/floral-crest.svg" alt="Petal and Promise floral emblem" width="48" height="48">
+        <span class="brand-text">
+          <span class="brand-title">Petal &amp; Promise</span>
+          <span class="brand-subtitle">M.Hassan 2 &middot; Wedding Services</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="primary-nav" aria-label="Wedding Planner Navigation">
+        <a class="nav-link" href="../index.html">Planner Home</a>
+        <a class="nav-link" href="../M.Hassan%201/index.html">M.Hassan 1: Venues</a>
+        <a class="nav-link" href="index.html" aria-current="page">Wedding Services</a>
+        <a class="nav-link" href="pages/summary.html">Service Summary</a>
+        <a class="nav-link nav-link--next" href="../M.Hassan%203/index.html">Next: M.Hassan 3 &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-heading">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Module 02 &middot; Curated Wedding Services</p>
+        <h1 id="page-heading">Choose Your Wedding Services</h1>
+        <p class="hero-lead">
+          Check the celebration services you need &mdash; Catering, Photography, Decoration, Makeup, and Music &mdash; customize your plan details, and save everything under <code>services</code> in same-origin <code>localStorage</code>.
+        </p>
+      </div>
+      <aside class="hero-badge-card" aria-label="Illustrative data notice">
+        <img src="images/floral-crest.svg" alt="Floral rose and sage wreath crest" width="68" height="68">
+        <p><strong>Illustrative Data Only</strong><br>Sample service packages and PKR estimates for wedding planning demos.</p>
+      </aside>
+    </div>
+  </section>
+
+  <div class="container divider-wrap">
+    <img class="floral-divider" src="images/floral-divider.svg" alt="" aria-hidden="true" width="400" height="48">
+  </div>
+
+  <main id="main-content" class="container">
+    <div class="workspace-grid">
+      <!-- Service Preferences Form -->
+      <aside class="panel" aria-labelledby="preferences-heading">
+        <h2 id="preferences-heading">Service Plan Details</h2>
+        <p class="panel-note">
+          Set an optional service budget cap and planning preferences. Checked services and form fields save to JSON <code>localStorage["services"]</code>.
+        </p>
+
+        <form id="services-form" novalidate>
+          <div class="form-group">
+            <label for="package-tier">Service Package Tier</label>
+            <select id="package-tier" name="packageTier" class="form-control">
+              <option value="essential">Essential Elegance (Standard)</option>
+              <option value="signature">Signature Celebration (Curated)</option>
+              <option value="royal">Royal Floral Suite (Full Custom)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="service-budget">Service Budget Cap (PKR, Optional)</label>
+            <input
+              type="text"
+              inputmode="numeric"
+              id="service-budget"
+              name="serviceBudget"
+              class="form-control"
+              placeholder="e.g. 600000"
+              aria-describedby="budget-hint budget-error"
+              autocomplete="off"
+            >
+            <p id="budget-hint" class="field-hint">Enter a positive whole number (1 or more), or leave blank for no cap. Press Escape to clear.</p>
+            <p id="budget-error" class="error-message" role="alert" hidden></p>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Coordinator Contact Email (Optional)</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="contactEmail"
+              class="form-control"
+              placeholder="e.g. couple@example.com"
+              aria-describedby="email-hint email-error"
+              autocomplete="email"
+            >
+            <p id="email-hint" class="field-hint">Used only in your local browser plan summary.</p>
+            <p id="email-error" class="error-message" role="alert" hidden></p>
+          </div>
+
+          <div class="form-group">
+            <label for="service-notes">Service Customization Notes</label>
+            <textarea
+              id="service-notes"
+              name="serviceNotes"
+              class="form-control"
+              rows="3"
+              placeholder="Menu tasting preferences, floral palette, song requests..."
+            ></textarea>
+          </div>
+
+          <div class="btn-row">
+            <button type="submit" class="btn btn-primary" id="save-services-btn">Save Selected Services</button>
+            <button type="button" class="btn btn-secondary" id="clear-selection-btn">Uncheck All</button>
+            <button type="button" class="btn btn-sage" id="clear-storage-btn">Clear Saved Data</button>
+          </div>
+
+          <div id="storage-status" class="status-banner" role="status" aria-live="polite" hidden></div>
+        </form>
+      </aside>
+
+      <!-- Dynamically Rendered Services Section -->
+      <section aria-labelledby="services-heading">
+        <div class="results-header">
+          <div>
+            <h2 id="services-heading">Available Wedding Services</h2>
+            <p id="services-hint" class="field-hint">Select at least one service to save your services plan.</p>
+          </div>
+          <div class="results-actions">
+            <button type="button" class="btn btn-secondary" id="select-all-btn">Select All 5</button>
+            <p id="selection-count" class="results-count" aria-live="polite">0 of 5 selected</p>
+          </div>
+        </div>
+
+        <p id="services-error" class="error-message" role="alert" hidden></p>
+
+        <fieldset id="services-fieldset" class="services-fieldset" aria-describedby="services-hint services-error">
+          <legend class="sr-only">Wedding Services Selection</legend>
+          <div id="service-list" class="service-grid" role="list"></div>
+        </fieldset>
+
+        <aside class="summary-panel" aria-labelledby="summary-heading">
+          <div>
+            <h3 id="summary-heading">Saved Services Summary</h3>
+            <p id="services-summary-text" aria-live="polite">0 services selected. Check any service card to begin.</p>
+            <p id="budget-comparison-text" class="budget-note" hidden></p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-secondary" href="pages/summary.html">Review Saved Summary</a>
+            <a class="btn btn-primary" id="next-module-link" href="../M.Hassan%203/index.html">Continue to M.Hassan 3 &rarr;</a>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Petal &amp; Promise &middot; M.Hassan 2 (Wedding Services) &middot; Illustrative planning data only.</p>
+      <div class="footer-links">
+        <a href="../M.Hassan%201/index.html">M.Hassan 1 (Venues)</a>
+        <a href="pages/summary.html">Service Summary Subpage</a>
+        <a href="../M.Hassan%203/index.html">M.Hassan 3</a>
+        <a href="README.md">Page README</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

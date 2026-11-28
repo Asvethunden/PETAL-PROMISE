@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="320" height="180" role="img" aria-labelledby="decorTitle">
+  <title id="decorTitle">Floral wedding decoration arch illustration</title>
+  <rect width="320" height="180" rx="12" fill="#FFF9F5"/>
+  <rect x="0" y="138" width="320" height="42" fill="#A3AC96" opacity="0.25"/>
+  <path d="M76 138 L76 74 Q160 20 244 74 L244 138" fill="none" stroke="#554A45" stroke-width="3"/>
+  <path d="M96 138 L96 82 Q160 38 224 82 L224 138" fill="#F3D7DF" opacity="0.45" stroke="#D49AA8" stroke-width="2"/>
+  <circle cx="104" cy="68" r="11" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+  <circle cx="160" cy="44" r="14" fill="#D49AA8"/>
+  <circle cx="160" cy="44" r="5" fill="#FFF9F5"/>
+  <circle cx="216" cy="68" r="11" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.5"/>
+  <path d="M122 56 C132 44, 146 42, 152 48 C144 56, 132 60, 122 56 Z" fill="#A3AC96"/>
+  <path d="M198 56 C188 44, 174 42, 168 48 C176 56, 188 60, 198 56 Z" fill="#A3AC96"/>
+</svg>
