@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-label="Eastern wedding arch adorned with blush roses, lilies, and ornate lantern motif">
+  <defs>
+    <linearGradient id="bgEast" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF9F5"/>
+      <stop offset="100%" stop-color="#F3D7DF"/>
+    </linearGradient>
+    <linearGradient id="archEast" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D49AA8"/>
+      <stop offset="100%" stop-color="#554A45"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="220" rx="16" fill="url(#bgEast)"/>
+  <!-- Subtle mandala filigree behind arch -->
+  <circle cx="180" cy="122" r="76" fill="none" stroke="#D49AA8" stroke-width="1.2" stroke-dasharray="4 5" opacity="0.45"/>
+  <circle cx="180" cy="122" r="58" fill="none" stroke="#A3AC96" stroke-width="1" opacity="0.4"/>
+  <!-- Mughal-inspired scalloped arch -->
+  <path d="M96 205 V116 C96 76 132 58 156 48 C168 43 175 34 180 28 C185 34 192 43 204 48 C228 58 264 76 264 116 V205" fill="#FFF9F5" fill-opacity="0.72" stroke="url(#archEast)" stroke-width="3"/>
+  <path d="M110 205 V120 C110 86 140 70 162 61 C172 57 177 50 180 45 C183 50 188 57 198 61 C220 70 250 86 250 120 V205" fill="none" stroke="#D49AA8" stroke-width="1.5" opacity="0.8"/>
+  <!-- Hanging lantern -->
+  <line x1="180" y1="45" x2="180" y2="82" stroke="#554A45" stroke-width="1.5"/>
+  <path d="M170 86 L180 78 L190 86 L187 104 L173 104 Z" fill="#F3D7DF" stroke="#554A45" stroke-width="1.4"/>
+  <circle cx="180" cy="94" r="3.5" fill="#D49AA8"/>
+  <!-- Garland strands -->
+  <path d="M118 112 Q148 134 180 118 Q212 134 242 112" fill="none" stroke="#A3AC96" stroke-width="2.2"/>
+  <circle cx="134" cy="121" r="4.5" fill="#D49AA8"/>
+  <circle cx="150" cy="124" r="4" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1"/>
+  <circle cx="210" cy="124" r="4" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1"/>
+  <circle cx="226" cy="121" r="4.5" fill="#D49AA8"/>
+  <!-- Left sage leaves & rose cluster -->
+  <g transform="translate(86, 154)">
+    <ellipse cx="-14" cy="10" rx="16" ry="7" transform="rotate(-32 -14 10)" fill="#A3AC96"/>
+    <ellipse cx="14" cy="16" rx="15" ry="6.5" transform="rotate(25 14 16)" fill="#A3AC96" opacity="0.85"/>
+    <circle cx="0" cy="0" r="18" fill="#D49AA8"/>
+    <circle cx="-4" cy="-3" r="11" fill="#F3D7DF"/>
+    <path d="M-7 -2 C-7 -8 5 -8 6 -1 C7 6 -4 8 -7 2" fill="none" stroke="#554A45" stroke-width="1.4" stroke-linecap="round"/>
+    <circle cx="16" cy="-16" r="11" fill="#F3D7DF" stroke="#D49AA8" stroke-width="1.2"/>
+    <circle cx="16" cy="-16" r="5" fill="#D49AA8"/>
+  </g>
+  <!-- Right lily & rose cluster -->
+  <g transform="translate(270, 152)">
+    <ellipse cx="15" cy="12" rx="16" ry="7" transform="rotate(30 15 12)" fill="#A3AC96"/>
+    <ellipse cx="-14" cy="15" rx="14" ry="6" transform="rotate(-24 -14 15)" fill="#A3AC96" opacity="0.85"/>
+    <!-- Lily petals -->
+    <path d="M0 -24 C8 -12 8 -2 0 4 C-8 -2 -8 -12 0 -24 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2"/>
+    <path d="M22 -4 C12 4 2 4 -4 -2 C2 -10 12 -10 22 -4 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2"/>
+    <path d="M-22 -4 C-12 -10 -2 -10 4 -2 C-2 4 -12 4 -22 -4 Z" fill="#FFF9F5" stroke="#D49AA8" stroke-width="1.2"/>
+    <circle cx="0" cy="-2" r="4" fill="#D49AA8"/>
+    <circle cx="-12" cy="14" r="13" fill="#D49AA8"/>
+    <circle cx="-14" cy="12" r="7" fill="#F3D7DF"/>
+  </g>
+</svg>
